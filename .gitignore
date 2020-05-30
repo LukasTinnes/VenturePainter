@@ -118,6 +118,7 @@ fabric.properties
 
 .idea/
 *.idea
+*.idea/
 
 # Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
 

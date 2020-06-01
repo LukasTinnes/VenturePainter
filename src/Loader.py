@@ -18,9 +18,10 @@ class Loader:
     def load(self, filename):
         tree = ET.parse(self.path + filename)
         root = tree.getroot()
+        shapes = []
         for child in root:
-            fuzzy = self._load_object(child)
-            print(fuzzy)
+            shapes.append(self._load_object(child))
+        return shapes
 
     def _load_object(self, child):
         tag = re.sub(r"{http://www\.w3\.org/2000/svg}", "", child.tag)  # TODO this is not future proof!
@@ -31,5 +32,6 @@ class Loader:
         width = float(attrib["width"])
         height = float(attrib["height"])
         position = np.array([float(attrib["x"]) + width/2, float(attrib["y"]) + height/2])
-        rect = Rectangle(position, width, height, self.id_count)
+        rect = Rectangle(position, width, height, self.id_count, {"color": attrib["fill"]})
+        self.id_count += 1
         return rect

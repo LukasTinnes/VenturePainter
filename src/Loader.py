@@ -1,8 +1,6 @@
 import xml.etree.ElementTree as ET
 import re
-import Engine
-Engine.init()
-from Engine import shape_factory
+from src.Shapes.Rectangle import Rectangle
 import numpy as np
 
 
@@ -21,7 +19,8 @@ class Loader:
         tree = ET.parse(self.path + filename)
         root = tree.getroot()
         for child in root:
-            self._load_object(child)
+            fuzzy = self._load_object(child)
+            print(fuzzy)
 
     def _load_object(self, child):
         tag = re.sub(r"{http://www\.w3\.org/2000/svg}", "", child.tag)  # TODO this is not future proof!
@@ -32,5 +31,5 @@ class Loader:
         width = float(attrib["width"])
         height = float(attrib["height"])
         position = np.array([float(attrib["x"]) + width/2, float(attrib["y"]) + height/2])
-        rect = shape_factory.AAB(position, width, height, self.id_count)
-        print(rect)
+        rect = Rectangle(position, width, height, self.id_count)
+        return rect

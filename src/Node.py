@@ -5,10 +5,13 @@ class Node:
 
     def __init__(self, identifier):
         """
-        :param identifier: Identifier is the object id given to a Object in Loader.py
+        :param identifier: Identifier is hash of given Shape Object
         """
         self.identifier = identifier
         self.pointer = []
+
+    def get_identifier(self):
+        return self.identifier
 
     def point_to(self, identifier):
         self.pointer.append(identifier)

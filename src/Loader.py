@@ -38,7 +38,7 @@ class Loader:
         :return: Fuzzy shape object representing the given tree element
         """
         # Filtering tag from svg namespace, because xml sux
-        tag = re.sub(r"{http://www\.w3\.org/2000/svg}", "", child.tag)  # TODO this is not future proof!
+        tag = re.sub("{.*}", "", child.tag)
         attrib = child.attrib
         return self.action_dict[tag](attrib)
 

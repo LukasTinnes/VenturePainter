@@ -5,7 +5,7 @@ from Engine.Shapes.FinitelyBounded.ShapeCollections.Std.AAB import AAB
 class Rectangle(AAB, FESS):
 
     def get_fuzziness(self):
-        #Todo implement
+        # Todo implement
         pass
 
     def __init__(self, position, width, height, identifier=-1, surface_info=None):

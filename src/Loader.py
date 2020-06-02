@@ -29,7 +29,7 @@ class Loader:
         shapes = []
         for child in root:
             shapes.append(self._load_object(child))
-        return shapes
+        return root, shapes
 
     def _load_object(self, child):
         """

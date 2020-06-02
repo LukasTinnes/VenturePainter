@@ -4,6 +4,9 @@ class Node:
     """
 
     def __init__(self, identifier):
+        """
+        :param identifier: Identifier is the object id given to a Object in Loader.py
+        """
         self.identifier = identifier
         self.pointer = []
 

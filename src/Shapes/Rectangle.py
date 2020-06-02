@@ -1,6 +1,5 @@
 from src.Shapes.FESS import FESS
-from src import Shapes
-AAB = Shapes.shape_factory.AAB
+from Engine.Shapes.FinitelyBounded.ShapeCollections.Std.AAB import AAB
 
 
 class Rectangle(AAB, FESS):

@@ -1,9 +1,8 @@
-from Engine import shape_factory
-Simple = shape_factory.Simple
+from Engine.Shapes.FinitelyBounded.ShapeCollections.Std.Shape import Shape
 from abc import abstractmethod
 
 
-class FESS(Simple):
+class FESS(Shape):
     """This class implements Fuzzy Elevated Surface Shapes"""
 
     @abstractmethod

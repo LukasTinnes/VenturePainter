@@ -26,10 +26,11 @@ class Loader:
         """
         tree = ET.parse(self.path + filename)
         root = tree.getroot()
+        attrib = root.attrib
         shapes = []
         for child in root:
             shapes.append(self._load_object(child))
-        return root, shapes
+        return Rectangle(np.array([float(attrib["width"])/2, float(attrib["height"])/2]), float(attrib["width"]), float(attrib["height"]), -1), shapes
 
     def _load_object(self, child):
         """

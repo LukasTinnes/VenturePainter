@@ -16,7 +16,7 @@ class Interpreter:
             node = Node(hash(shape))
             for graph_node in graph:
                 # If background then just point background to object and break
-                if hash(graph_node) == hash(background):
+                if hash(graph_node) == hash(background) and hash(shape) != hash(background):
                     graph_node.point_to(node.get_identifier())
                     continue
                 else:
@@ -30,6 +30,10 @@ class Interpreter:
                         if node_bbox.overlaps_completely(graph_node_bbox):
                             # B points to A
                             node.point_to(graph_node.get_identifier())
+                        # Case B in A
+                        if graph_node_bbox.overlaps_completely(node_bbox):
+                            # A points to B
+                            graph_node.point_to(node.get_identifier())
                         else:
                             # A points to B and B points to A
                             graph_node.point_to(node.get_identifier())

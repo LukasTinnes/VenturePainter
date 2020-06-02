@@ -25,13 +25,14 @@ class Interpreter:
                     graph_node_shape = shapes[hash(graph_node)]
                     graph_node_bbox = graph_node_shape.get_bounding_box()
                     # Case overlapping
+                    # Todo overlap method doesnt work, problem in engine
                     if node_bbox.overlaps(node_bbox, graph_node_bbox):
                         # Case A in B
                         if node_bbox.overlaps_completely(graph_node_bbox):
                             # B points to A
                             graph_node.point_to(node.get_identifier())
                         else:
-                            # A points to B and P points to A
+                            # A points to B and B points to A
                             graph_node.point_to(node.get_identifier())
                             node.point_to(graph_node.get_identifier())
             # Else no pointers, lastly append node to graph

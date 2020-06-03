@@ -10,7 +10,4 @@ class Rectangle(AAB, FESS):
 
     def __init__(self, position, width, height, identifier=-1, surface_info=None):
         AAB.__init__(self, position, width, height, identifier)
-        self.surface_info = surface_info
-
-    def get_surface_info(self) -> dict:
-        return self.surface_info
+        FESS.__init__(self, surface_info)

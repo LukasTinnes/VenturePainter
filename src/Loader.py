@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import re
 from src.Shapes.Rectangle import Rectangle
+from src.SurfaceInfo import SurfaceInfo
 import numpy as np
 
 
@@ -52,6 +53,6 @@ class Loader:
         width = float(attrib["width"])
         height = float(attrib["height"])
         position = np.array([float(attrib["x"]) + width/2, float(attrib["y"]) + height/2])
-        rect = Rectangle(position, width, height, self.id_count, {"color": attrib["fill"]})
+        rect = Rectangle(position, width, height, self.id_count, SurfaceInfo())
         self.id_count += 1
         return rect

@@ -7,8 +7,8 @@ assignees: ''
 
 ---
 
-Pls dont do sth like that.
+Pls don't do sth like that.
 
-We dont want issues.
+We don't want issues.
 
-Pls. Just dont
+Pls. Just don't

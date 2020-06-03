@@ -53,6 +53,6 @@ class Loader:
         width = float(attrib["width"])
         height = float(attrib["height"])
         position = np.array([float(attrib["x"]) + width/2, float(attrib["y"]) + height/2])
-        rect = Rectangle(position, width, height, self.id_count, SurfaceInfo())
+        rect = Rectangle(position, width, height, self.id_count, SurfaceInfo(color=attrib["fill"]))
         self.id_count += 1
         return rect

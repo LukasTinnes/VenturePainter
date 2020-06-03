@@ -1,4 +1,5 @@
-from PIL import Image
+from PIL import Image, ImageDraw
+from Engine.Camera import Camera
 
 class Painter:
     """
@@ -9,12 +10,18 @@ class Painter:
     def __init__(self):
         pass
 
-    def paint(self, hierarchy, dimensions):
+    def paint(self, hierarchy, background, shapes, dimensions):
         """
         Paints an image based on a relationship graph provided
         :return:
         """
+        cam = Camera()
         img = Image.new("RGB", dimensions)
-        #TODO MAGIC
+        draw = ImageDraw.ImageDraw(img)
+        hs = list(zip(hierarchy, shapes))
+        for i in range(len(hs)):
+            shape = hs[i][1]
+            node = hs[i][0]
+            draw.rectangle([(shape.left, dimensions[1]-shape.up), (shape.width, shape.height)], fill="#ffff33")
         return img
 

@@ -29,11 +29,16 @@ class Loader:
         tree = ET.parse(self.path + filename)
         root = tree.getroot()
         attrib = root.attrib
-        cam = Camera(np.array([float(attrib["width"])/2, float(attrib["height"])/2]), int(attrib["width"]), int(attrib["height"]), anchor=(True, False))
+        background = Rectangle(np.array([float(attrib["width"])/2, float(attrib["height"])/2]),
+                               float(attrib["width"]), float(attrib["height"]), -1)
+
+        cam = Camera(np.array([float(attrib["width"])/2, float(attrib["height"])/2]),
+                     int(attrib["width"]), int(attrib["height"]), anchor=(True, False))
+
         shapes = []
         for child in root:
             shapes.append(self._load_object(child, cam))
-        return Rectangle(np.array([float(attrib["width"])/2, float(attrib["height"])/2]), float(attrib["width"]), float(attrib["height"]), -1), shapes
+        return background, shapes, cam
 
     def _load_object(self, child, cam):
         """

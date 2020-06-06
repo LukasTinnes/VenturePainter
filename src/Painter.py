@@ -26,6 +26,12 @@ class Painter:
             shape = hs[i][1]
             node = hs[i][0]
             anchor = cam.world_to_cam([shape.left, shape.up])
-            draw.rectangle([(anchor[0], anchor[1]), (shape.width, shape.height)], fill=(random.randint(0,255),random.randint(0,255),random.randint(0,255)))
+            print(anchor)
+            draw.rectangle([(anchor[0], anchor[1]), (shape.width, shape.height)], fill=(random.randint(0,125),random.randint(0,125),random.randint(0,125)))
+        for i in range(len(hs)):
+            shape = hs[i][1]
+            node = hs[i][0]
+            anchor = cam.world_to_cam([shape.left, shape.up])
+            draw.text((anchor[0], anchor[1]), f"{hash(shape)}", fill=(255, 255, 255))
         return img
 

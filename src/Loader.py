@@ -3,6 +3,7 @@ import re
 from src.Shapes.Rectangle import Rectangle
 from src.SurfaceInfo import SurfaceInfo
 import numpy as np
+from Engine.Camera import Camera
 
 
 class Loader:
@@ -28,12 +29,13 @@ class Loader:
         tree = ET.parse(self.path + filename)
         root = tree.getroot()
         attrib = root.attrib
+        cam = Camera(np.array([float(attrib["width"])/2, float(attrib["height"])/2]), int(attrib["width"]), int(attrib["height"]), anchor=(True, False))
         shapes = []
         for child in root:
-            shapes.append(self._load_object(child))
+            shapes.append(self._load_object(child, cam))
         return Rectangle(np.array([float(attrib["width"])/2, float(attrib["height"])/2]), float(attrib["width"]), float(attrib["height"]), -1), shapes
 
-    def _load_object(self, child):
+    def _load_object(self, child, cam):
         """
         Loads a specific tree element depending on its tag
         :param child: tree element
@@ -42,9 +44,9 @@ class Loader:
         # Filtering tag from svg namespace, because xml sux
         tag = re.sub("{.*}", "", child.tag)
         attrib = child.attrib
-        return self.action_dict[tag](attrib)
+        return self.action_dict[tag](attrib, cam)
 
-    def _load_rect(self, attrib):
+    def _load_rect(self, attrib, cam: Camera):
         """
         Loads a rectangle (gets called in load_object)
         :param attrib: rectangle attributes
@@ -52,7 +54,8 @@ class Loader:
         """
         width = float(attrib["width"])
         height = float(attrib["height"])
-        position = np.array([float(attrib["x"]) + width/2, float(attrib["y"]) + height/2])
+        cam_position = np.array([float(attrib["x"]) + width/2, float(attrib["y"]) + height/2])
+        position = cam.cam_to_world(cam_position)
         rect = Rectangle(position, width, height, self.id_count, SurfaceInfo(color=attrib["fill"]))
         self.id_count += 1
         return rect

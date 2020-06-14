@@ -1,5 +1,6 @@
 from PIL import Image
 import random
+import math
 
 
 class Texture:
@@ -24,16 +25,16 @@ class Texture:
     def tiles(self, dimensions):
         img = Image.new("RGB", dimensions)
         print(int(dimensions[0] / self.image.size[0]), int(dimensions[1] / self.image.size[1]))
-        for x in range(int(dimensions[0] / self.image.size[0]) + 1):
-            for y in range(int(dimensions[1] / self.image.size[1]) + 1):
+        for x in range(math.ceil(dimensions[0] / self.image.size[0])):
+            for y in range(math.ceil(dimensions[1] / self.image.size[1])):
                 img.paste(self.image, (x * self.image.size[0], y * self.image.size[1]))
         return img
 
     def mirror_tiles(self, dimensions):
         img = Image.new("RGB", dimensions)
         print(int(dimensions[0] / self.image.size[0]), int(dimensions[1] / self.image.size[1]))
-        for x in range(int(dimensions[0] / self.image.size[0]) + 1):
-            for y in range(int(dimensions[1] / self.image.size[1]) + 1):
+        for x in range(math.ceil(dimensions[0] / self.image.size[0])):
+            for y in range(math.ceil(dimensions[1] / self.image.size[1])):
                 to_paste = self.image
                 if x % 2 == 1:
                     to_paste = to_paste.transpose(Image.FLIP_LEFT_RIGHT)

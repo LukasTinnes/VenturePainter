@@ -32,8 +32,8 @@ class Texture:
     def mirror_tiles(self, dimensions):
         img = Image.new("RGB", dimensions)
         print(int(dimensions[0] / self.image.size[0]), int(dimensions[1] / self.image.size[1]))
-        for x in range(int(dimensions[0] / self.image.size[0])):
-            for y in range(int(dimensions[1] / self.image.size[1])):
+        for x in range(int(dimensions[0] / self.image.size[0]) + 1):
+            for y in range(int(dimensions[1] / self.image.size[1]) + 1):
                 to_paste = self.image
                 if x % 2 == 1:
                     to_paste = to_paste.transpose(Image.FLIP_LEFT_RIGHT)

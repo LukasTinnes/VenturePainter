@@ -10,6 +10,7 @@ class Texture:
 
     def stochastic(self, dimensions):
         img = Image.new("RGB", dimensions)
+        self.color_size = 1
         width, height = self.image.size
         pixels_img = self.image.load()
         pixels_new_img = img.load()
@@ -52,6 +53,7 @@ class Texture:
         :return:
         """
         img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
+        #img = Image.new("L", dimensions, (0xFF,))
         img_crop = self.image.crop((seed[0], seed[1], seed[2]+1, seed[3]+1))
         img.paste(img_crop, (seed[0], seed[1]))
         img.show()
@@ -62,7 +64,7 @@ class Texture:
             print(f"Empties: {empties}")
             for empty in self.range_around_box(seed, img):
                 empties.remove(empty)
-                self.__growing(empty, pixels, pixels_orig, kernel, empties, seed, threshold)
+                self.__growing(empty, pixels, pixels_orig, kernel, empties, seed, threshold, dimensions)
 
             if not seed[0] == 0:
                 seed[0] -= 1
@@ -106,13 +108,16 @@ class Texture:
                 yield x, seed[1] - 1
 
 
-    def __growing(self, point, pixels_new, pixels_orig, kernel, empties, seed, threshold):
+    def __growing(self, point, pixels_new, pixels_orig, kernel, empties, seed, threshold, dimensions):
         candidates = []
         #print("growing")
         overall_color = (0, 0, 0)
+        #overall_color = 0
+        print(point)
         for x in range(self.image.size[0]):
             for y in range(self.image.size[1]):
                 acc = 0
+                mask_acc = 0
                 for mask_x in range(-int(kernel.shape[0]/2), int(kernel.shape[0]/2)+1):
                     for mask_y in range(-int(kernel.shape[1]/2), int(kernel.shape[1]/2)+1):
                         if not (point[0] + mask_x < seed[0] or point[1] + mask_y < seed[1]):
@@ -120,20 +125,23 @@ class Texture:
                                 if not (x + mask_x < 0 or y + mask_y < 0):
                                     if not (x + mask_x >= self.image.size[0] or y + mask_y >= self.image.size[1]):
                                         if not (point[0] + mask_x, point[1] + mask_y) in empties:
+                                            mask_acc += 1
                                             x_new, y_new = point[0] + mask_x, point[1] + mask_y
                                             col = pixels_new[x_new, y_new]
                                             #if col[0] == 0xFF and col[1] == 0x00 and col[2] == 0xFF:
                                             #    print("Something fucky")
-                                            col2 = pixels_orig[x + mask_x, y + mask_y] #TODO there is still a mistake here where the empties are never in consideration
+                                            col2 = pixels_orig[x + mask_x, y + mask_y]
+                                            #overall_color = overall_color + abs(col - col2) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)]
                                             overall_color = (overall_color[0] + abs(col[0] - col2[0]) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)],
                                                              overall_color[1] + abs(col[1] - col2[1]) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)],
                                                              overall_color[2] + abs(col[2] - col2[2]) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)])
 
                         acc += (overall_color[0] + overall_color[1] + overall_color[2]) / 3
+                        #acc += overall_color
                         overall_color = (0, 0, 0)
+                        #overall_color = 0
 
-                if acc < threshold:
-                    print(acc)
+                if acc < threshold and mask_acc > 0:
                     #print(f"Acc: {acc}")
                     candidates.append((x, y))
 

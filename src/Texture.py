@@ -44,6 +44,23 @@ class Texture:
                 img.paste(to_paste, (x * self.image.size[0], y * self.image.size[1]))
         return img
 
+    def quilting(self, dimensions, quilt_dimensions):
+        img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
+        img_quilt_ratio_x = int(dimensions[0] / quilt_dimensions[0])
+        img_quilt_ratio_y = int(dimensions[1] / quilt_dimensions[1])
+        for x in range(img_quilt_ratio_x):
+            for y in range(img_quilt_ratio_y):
+                print("X,y:", x,y)
+                print(self.image.size[0]-1-quilt_dimensions[0])
+                quilt_x = random.randint(0, self.image.size[0]-1-quilt_dimensions[0])
+                quilt_y = random.randint(0, self.image.size[1]-1-quilt_dimensions[1])
+                crop = self.image.crop((quilt_x, quilt_y, quilt_x + quilt_dimensions[0], quilt_y + quilt_dimensions[1]))
+                print(quilt_x, quilt_y)
+                print(crop.size)
+                print(x*quilt_dimensions[0], y*quilt_dimensions[1], (x+1)*quilt_dimensions[0]-1, (y+1)*quilt_dimensions[1]-1)
+                img.paste(crop, (x*quilt_dimensions[0], y*quilt_dimensions[1], (x+1)*quilt_dimensions[0], (y+1)*quilt_dimensions[1]))
+        return img
+
     def growing(self, dimensions, kernel, seed, threshold):
         """
         Image growing algorithm

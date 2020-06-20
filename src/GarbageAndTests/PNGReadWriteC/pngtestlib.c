@@ -5,6 +5,9 @@
  * Modified by Yoshimasa Niwa to make it much simpler
  * and support all defined color_type.
  *
+ * Also Modified by Ya Buoi, because this module was not commented at all
+ * Process_image could be changed to implement cool texture synthesis algorithms
+ *
  * To build, use the next instruction on OS X.
  * $ brew install libpng
  * $ clang -lz -lpng16 libpng_test.c
@@ -19,6 +22,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <png.h>
+
 
 int width, height;
 // init color type, bit depth and row pointer

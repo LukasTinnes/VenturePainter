@@ -80,16 +80,20 @@ void read_png_file(char *filename) {
 
   if (row_pointers) abort();
 
+  // Allocate row_pointers for each row
   row_pointers = (png_bytep*)malloc(sizeof(png_bytep) * height);
   for(int y = 0; y < height; y++) {
     row_pointers[y] = (png_byte*)malloc(png_get_rowbytes(png,info));
   }
 
+  // Read whole image via row pointers
   png_read_image(png, row_pointers);
 
   fclose(fp);
-
+  //Free memory
   png_destroy_read_struct(&png, &info, NULL);
+  png=NULL;
+  info=NULL;
 }
 
 void write_png_file(char *filename) {
@@ -97,7 +101,7 @@ void write_png_file(char *filename) {
 
   FILE *fp = fopen(filename, "wb");
   if(!fp) abort();
-
+  // Create write structure
   png_structp png = png_create_write_struct(PNG_LIBPNG_VER_STRING, NULL, NULL, NULL);
   if (!png) abort();
 
@@ -136,8 +140,8 @@ void write_png_file(char *filename) {
   free(row_pointers);
 
   fclose(fp);
-
-  png_destroy_write_struct(&png, &info);
+  // Free allocated data
+  if(png && info) png_destroy_write_struct(&png, &info);
 }
 
 void process_png_file() {
@@ -146,7 +150,7 @@ void process_png_file() {
     for(int x = 0; x < width; x++) {
       png_bytep px = &(row[x * 4]);
       // Do something awesome for each pixel here...
-      //printf("%4d, %4d = RGBA(%3d, %3d, %3d, %3d)\n", x, y, px[0], px[1], px[2], px[3]);
+      printf("%4d, %4d = RGBA(%3d, %3d, %3d, %3d)\n", x, y, px[0], px[1], px[2], px[3]);
     }
   }
 }

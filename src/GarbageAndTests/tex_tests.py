@@ -2,7 +2,7 @@ from src.Texture import Texture
 from PIL import Image
 import numpy
 
-img = Image.open(r"../../Resources/marble.png")
+img = Image.open(r"../../Resources/A2.png")
 #img = Image.open(r"..\..\Resources\marble.png").convert('L')
 tex = Texture(img)
 # new_img = tex.stochastic((100,100))

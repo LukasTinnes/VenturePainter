@@ -50,16 +50,73 @@ class Texture:
         img_quilt_ratio_y = int(dimensions[1] / quilt_dimensions[1])
         for x in range(img_quilt_ratio_x):
             for y in range(img_quilt_ratio_y):
-                print("X,y:", x,y)
-                print(self.image.size[0]-1-quilt_dimensions[0])
                 quilt_x = random.randint(0, self.image.size[0]-1-quilt_dimensions[0])
                 quilt_y = random.randint(0, self.image.size[1]-1-quilt_dimensions[1])
                 crop = self.image.crop((quilt_x, quilt_y, quilt_x + quilt_dimensions[0], quilt_y + quilt_dimensions[1]))
-                print(quilt_x, quilt_y)
-                print(crop.size)
-                print(x*quilt_dimensions[0], y*quilt_dimensions[1], (x+1)*quilt_dimensions[0]-1, (y+1)*quilt_dimensions[1]-1)
                 img.paste(crop, (x*quilt_dimensions[0], y*quilt_dimensions[1], (x+1)*quilt_dimensions[0], (y+1)*quilt_dimensions[1]))
         return img
+
+    def quilting_overlay(self, dimensions, quilt_dimensions, overlay=0): #TODO Is bugged needs to be parallelized
+        img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
+        img_quilt_ratio_x = int(dimensions[0] / (quilt_dimensions[0]-overlay))
+        img_quilt_ratio_y = int(dimensions[1] / (quilt_dimensions[1]-overlay))
+        for x in range(img_quilt_ratio_x):
+            for y in range(img_quilt_ratio_y):
+                print("Quilt", x,y, img_quilt_ratio_x, img_quilt_ratio_y)
+                if x == 0 and y == 0:
+                    quilt_x = random.randint(0, self.image.size[0] - 1 - quilt_dimensions[0])
+                    quilt_y = random.randint(0, self.image.size[1] - 1 - quilt_dimensions[1])
+                    crop = self.image.crop(
+                        (quilt_x, quilt_y, quilt_x + quilt_dimensions[0], quilt_y + quilt_dimensions[1]))
+                else:
+                    crop = None
+                    final_error = math.inf
+                    f_x = -1
+                    f_y = -1
+                    for x_comp in range(self.image.size[0] - quilt_dimensions[0]):
+                        for y_comp in range(self.image.size[1] - quilt_dimensions[1]):
+                            comparison_quilt = self.image.crop(
+                                (x_comp, y_comp, x_comp + quilt_dimensions[0], y_comp + quilt_dimensions[1]))
+                            comp_pix = comparison_quilt.load()
+                            img_pix = img.load()
+
+                            error_left = 0
+                            error_up = 0
+
+                            if x > 0:
+                                for x_ssd in range(overlay):
+                                    for y_ssd in range(quilt_dimensions[1]):
+                                        error_r = (comp_pix[x_ssd, y_ssd][0] -
+                                                   img_pix[quilt_dimensions[0] - 1 - overlay + x_ssd, y_ssd][0]) ** 2
+                                        error_g = (comp_pix[x_ssd, y_ssd][1] -
+                                                   img_pix[quilt_dimensions[0] - 1 - overlay + x_ssd, y_ssd][1]) ** 2
+                                        error_b = (comp_pix[x_ssd, y_ssd][2] -
+                                                   img_pix[quilt_dimensions[0] - 1 - overlay + x_ssd, y_ssd][2]) ** 2
+                                        error_left += (error_r + error_g + error_b) / 3
+                                error_left /= overlay * quilt_dimensions[1]
+                            if y > 0:
+                                for x_ssd in range(quilt_dimensions[0]):
+                                    for y_ssd in range(overlay):
+                                        error_r = (comp_pix[x_ssd, y_ssd][0] -
+                                                   img_pix[x_ssd, quilt_dimensions[1] - 1 - overlay + y_ssd][0]) ** 2
+                                        error_g = (comp_pix[x_ssd, y_ssd][1] -
+                                                   img_pix[x_ssd, quilt_dimensions[1] - 1 - overlay + y_ssd][1]) ** 2
+                                        error_b = (comp_pix[x_ssd, y_ssd][2] -
+                                                   img_pix[x_ssd, quilt_dimensions[1] - 1 - overlay + y_ssd][2]) ** 2
+                                        error_up += (error_r + error_g + error_b) / 3
+                                error_up /= overlay * quilt_dimensions[1]
+                            error = error_up + error_left
+                            if error < final_error:
+                                final_error = error
+                                crop = comparison_quilt
+                                f_x = x_comp
+                                f_y = y_comp
+                    print("Final Error",final_error)
+                    print("f", f_x, f_y)
+                img.paste(crop, (x*quilt_dimensions[0], y*quilt_dimensions[1], (x+1)*quilt_dimensions[0], (y+1)*quilt_dimensions[1]))
+        return img
+
+
 
     def growing(self, dimensions, kernel, seed, threshold):
         """

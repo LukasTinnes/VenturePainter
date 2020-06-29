@@ -1,7 +1,8 @@
-from PIL import Image
-import random
 import math
-import numpy
+import random
+
+from PIL import Image
+
 
 class Texture:
 
@@ -50,19 +51,20 @@ class Texture:
         img_quilt_ratio_y = int(dimensions[1] / quilt_dimensions[1])
         for x in range(img_quilt_ratio_x):
             for y in range(img_quilt_ratio_y):
-                quilt_x = random.randint(0, self.image.size[0]-1-quilt_dimensions[0])
-                quilt_y = random.randint(0, self.image.size[1]-1-quilt_dimensions[1])
+                quilt_x = random.randint(0, self.image.size[0] - 1 - quilt_dimensions[0])
+                quilt_y = random.randint(0, self.image.size[1] - 1 - quilt_dimensions[1])
                 crop = self.image.crop((quilt_x, quilt_y, quilt_x + quilt_dimensions[0], quilt_y + quilt_dimensions[1]))
-                img.paste(crop, (x*quilt_dimensions[0], y*quilt_dimensions[1], (x+1)*quilt_dimensions[0], (y+1)*quilt_dimensions[1]))
+                img.paste(crop, (x * quilt_dimensions[0], y * quilt_dimensions[1], (x + 1) * quilt_dimensions[0],
+                                 (y + 1) * quilt_dimensions[1]))
         return img
 
-    def quilting_overlay(self, dimensions, quilt_dimensions, overlay=0): #TODO Is bugged needs to be parallelized
+    def quilting_overlay(self, dimensions, quilt_dimensions, overlay=0):  # TODO Is bugged needs to be parallelized
         img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
-        img_quilt_ratio_x = int(dimensions[0] / (quilt_dimensions[0]-overlay))
-        img_quilt_ratio_y = int(dimensions[1] / (quilt_dimensions[1]-overlay))
+        img_quilt_ratio_x = int(dimensions[0] / (quilt_dimensions[0] - overlay))
+        img_quilt_ratio_y = int(dimensions[1] / (quilt_dimensions[1] - overlay))
         for x in range(img_quilt_ratio_x):
             for y in range(img_quilt_ratio_y):
-                print("Quilt", x,y, img_quilt_ratio_x, img_quilt_ratio_y)
+                print("Quilt", x, y, img_quilt_ratio_x, img_quilt_ratio_y)
                 if x == 0 and y == 0:
                     quilt_x = random.randint(0, self.image.size[0] - 1 - quilt_dimensions[0])
                     quilt_y = random.randint(0, self.image.size[1] - 1 - quilt_dimensions[1])
@@ -111,12 +113,11 @@ class Texture:
                                 crop = comparison_quilt
                                 f_x = x_comp
                                 f_y = y_comp
-                    print("Final Error",final_error)
+                    print("Final Error", final_error)
                     print("f", f_x, f_y)
-                img.paste(crop, (x*quilt_dimensions[0], y*quilt_dimensions[1], (x+1)*quilt_dimensions[0], (y+1)*quilt_dimensions[1]))
+                img.paste(crop, (x * quilt_dimensions[0], y * quilt_dimensions[1], (x + 1) * quilt_dimensions[0],
+                                 (y + 1) * quilt_dimensions[1]))
         return img
-
-
 
     def growing(self, dimensions, kernel, seed, threshold):
         """
@@ -127,13 +128,13 @@ class Texture:
         :return:
         """
         img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
-        #img = Image.new("L", dimensions, (0xFF,))
-        img_crop = self.image.crop((seed[0], seed[1], seed[2]+1, seed[3]+1))
+        # img = Image.new("L", dimensions, (0xFF,))
+        img_crop = self.image.crop((seed[0], seed[1], seed[2] + 1, seed[3] + 1))
         img.paste(img_crop, (seed[0], seed[1]))
         img.show()
         pixels = img.load()
         pixels_orig = self.image.load()
-        while not (seed[0] == 0 and seed[1] == 0 and seed[2] == dimensions[0]-1 and seed[3] == dimensions[1]-1):
+        while not (seed[0] == 0 and seed[1] == 0 and seed[2] == dimensions[0] - 1 and seed[3] == dimensions[1] - 1):
             empties = list(self.range_around_box(seed, img))
             print(f"Empties: {empties}")
             for empty in self.range_around_box(seed, img):
@@ -144,9 +145,9 @@ class Texture:
                 seed[0] -= 1
             if not seed[1] == 0:
                 seed[1] -= 1
-            if not seed[2] == img.size[0]-1:
+            if not seed[2] == img.size[0] - 1:
                 seed[2] += 1
-            if not seed[3] == img.size[1]-1:
+            if not seed[3] == img.size[1] - 1:
                 seed[3] += 1
             print(f"SEED: {seed}")
 
@@ -181,19 +182,18 @@ class Texture:
             for x in range(seed[0], seed[2] + 1):
                 yield x, seed[1] - 1
 
-
     def __growing(self, point, pixels_new, pixels_orig, kernel, empties, seed, threshold, dimensions):
         candidates = []
-        #print("growing")
+        # print("growing")
         overall_color = (0, 0, 0)
-        #overall_color = 0
+        # overall_color = 0
         print(point)
         for x in range(self.image.size[0]):
             for y in range(self.image.size[1]):
                 acc = 0
                 mask_acc = 0
-                for mask_x in range(-int(kernel.shape[0]/2), int(kernel.shape[0]/2)+1):
-                    for mask_y in range(-int(kernel.shape[1]/2), int(kernel.shape[1]/2)+1):
+                for mask_x in range(-int(kernel.shape[0] / 2), int(kernel.shape[0] / 2) + 1):
+                    for mask_y in range(-int(kernel.shape[1] / 2), int(kernel.shape[1] / 2) + 1):
                         if not (point[0] + mask_x < seed[0] or point[1] + mask_y < seed[1]):
                             if not (point[0] + mask_x > seed[2] or point[1] + mask_y > seed[3]):
                                 if not (x + mask_x < 0 or y + mask_y < 0):
@@ -202,21 +202,26 @@ class Texture:
                                             mask_acc += 1
                                             x_new, y_new = point[0] + mask_x, point[1] + mask_y
                                             col = pixels_new[x_new, y_new]
-                                            #if col[0] == 0xFF and col[1] == 0x00 and col[2] == 0xFF:
+                                            # if col[0] == 0xFF and col[1] == 0x00 and col[2] == 0xFF:
                                             #    print("Something fucky")
                                             col2 = pixels_orig[x + mask_x, y + mask_y]
-                                            #overall_color = overall_color + abs(col - col2) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)]
-                                            overall_color = (overall_color[0] + abs(col[0] - col2[0]) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)],
-                                                             overall_color[1] + abs(col[1] - col2[1]) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)],
-                                                             overall_color[2] + abs(col[2] - col2[2]) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)])
+                                            # overall_color = overall_color + abs(col - col2) * kernel[mask_x + int(kernel.shape[0]/2), mask_y + int(kernel.shape[0]/2)]
+                                            overall_color = (overall_color[0] + abs(col[0] - col2[0]) * kernel[
+                                                mask_x + int(kernel.shape[0] / 2), mask_y + int(kernel.shape[0] / 2)],
+                                                             overall_color[1] + abs(col[1] - col2[1]) * kernel[
+                                                                 mask_x + int(kernel.shape[0] / 2), mask_y + int(
+                                                                     kernel.shape[0] / 2)],
+                                                             overall_color[2] + abs(col[2] - col2[2]) * kernel[
+                                                                 mask_x + int(kernel.shape[0] / 2), mask_y + int(
+                                                                     kernel.shape[0] / 2)])
 
                         acc += (overall_color[0] + overall_color[1] + overall_color[2]) / 3
-                        #acc += overall_color
+                        # acc += overall_color
                         overall_color = (0, 0, 0)
-                        #overall_color = 0
+                        # overall_color = 0
 
                 if acc < threshold and mask_acc > 0:
-                    #print(f"Acc: {acc}")
+                    # print(f"Acc: {acc}")
                     candidates.append((x, y))
 
         winner = random.choice(candidates)

@@ -51,12 +51,21 @@ class Texture:
         img_quilt_ratio_y = int(dimensions[1] / quilt_dimensions[1])
         for x in range(img_quilt_ratio_x):
             for y in range(img_quilt_ratio_y):
-                quilt_x = random.randint(0, self.image.size[0] - 1 - quilt_dimensions[0])
-                quilt_y = random.randint(0, self.image.size[1] - 1 - quilt_dimensions[1])
+                quilt_x, quilt_y = self.quilt_x_y(quilt_dimensions)
                 crop = self.image.crop((quilt_x, quilt_y, quilt_x + quilt_dimensions[0], quilt_y + quilt_dimensions[1]))
                 img.paste(crop, (x * quilt_dimensions[0], y * quilt_dimensions[1], (x + 1) * quilt_dimensions[0],
                                  (y + 1) * quilt_dimensions[1]))
         return img
+
+    def quilt_x_y(self, quilt_dimensions):
+        """
+        quilt_x and quilt_y
+        :param quilt_dimensions:
+        :return:
+        """
+        quilt_x = random.randint(0, self.image.size[0] - 1 - quilt_dimensions[0])
+        quilt_y = random.randint(0, self.image.size[1] - 1 - quilt_dimensions[1])
+        return quilt_x, quilt_y
 
     def quilting_overlay(self, dimensions, quilt_dimensions, overlay=0):  # TODO Is bugged needs to be parallelized
         img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
@@ -66,8 +75,7 @@ class Texture:
             for y in range(img_quilt_ratio_y):
                 print("Quilt", x, y, img_quilt_ratio_x, img_quilt_ratio_y)
                 if x == 0 and y == 0:
-                    quilt_x = random.randint(0, self.image.size[0] - 1 - quilt_dimensions[0])
-                    quilt_y = random.randint(0, self.image.size[1] - 1 - quilt_dimensions[1])
+                    quilt_x, quilt_y = self.quilt_x_y(quilt_dimensions)
                     crop = self.image.crop(
                         (quilt_x, quilt_y, quilt_x + quilt_dimensions[0], quilt_y + quilt_dimensions[1]))
                 else:
@@ -125,6 +133,8 @@ class Texture:
         :param dimensions:
         :param mask:
         :param seed:
+        :param kernel
+        :param threshold
         :return:
         """
         img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
@@ -153,7 +163,8 @@ class Texture:
 
         return img
 
-    def range_around_box(self, seed, img):
+    @staticmethod
+    def range_around_box(seed, img):
         if not (seed[1] == 0 or seed[0] == 0):
             yield seed[0] - 1, seed[1] - 1
 

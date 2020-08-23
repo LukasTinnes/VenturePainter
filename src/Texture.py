@@ -25,6 +25,11 @@ class Texture:
         return img
 
     def tiles(self, dimensions):
+        """
+        Copy pastes the images as tiles
+        :param dimensions:
+        :return:
+        """
         img = Image.new("RGB", dimensions)
         print(int(dimensions[0] / self.image.size[0]), int(dimensions[1] / self.image.size[1]))
         for x in range(math.ceil(dimensions[0] / self.image.size[0])):
@@ -46,6 +51,12 @@ class Texture:
         return img
 
     def quilting(self, dimensions, quilt_dimensions):
+        """
+        Implements quilting algorithm, defined in https://people.eecs.berkeley.edu/~efros/research/quilting/quilting.pdf
+        :param dimensions:
+        :param quilt_dimensions:
+        :return:
+        """
         img = Image.new("RGB", dimensions, (0xFF, 0x00, 0xFF))
         img_quilt_ratio_x = int(dimensions[0] / quilt_dimensions[0])
         img_quilt_ratio_y = int(dimensions[1] / quilt_dimensions[1])
@@ -60,8 +71,8 @@ class Texture:
     def quilt_x_y(self, quilt_dimensions):
         """
         quilt_x and quilt_y
-        :param quilt_dimensions:
-        :return:
+        :param quilt_dimensions: quilt_dimensions
+        :return: quilt_x and quilt_y
         """
         quilt_x = random.randint(0, self.image.size[0] - 1 - quilt_dimensions[0])
         quilt_y = random.randint(0, self.image.size[1] - 1 - quilt_dimensions[1])

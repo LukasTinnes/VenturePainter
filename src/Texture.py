@@ -11,7 +11,6 @@ class Texture:
 
     def stochastic(self, dimensions):
         img = Image.new("RGB", dimensions)
-        self.color_size = 1
         width, height = self.image.size
         pixels_img = self.image.load()
         pixels_new_img = img.load()
@@ -142,7 +141,6 @@ class Texture:
         """
         Image growing algorithm
         :param dimensions:
-        :param mask:
         :param seed:
         :param kernel
         :param threshold

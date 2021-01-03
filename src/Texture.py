@@ -1,7 +1,6 @@
 import math
 import random
 
-import cv2
 import numpy as np
 
 
@@ -11,7 +10,7 @@ class Texture:
         self.image = image
 
     @staticmethod
-    def saltAndPepper(self, dimensions, salt=None, pepper=None, p=0.5):
+    def saltAndPepper(dimensions, salt=None, pepper=None, p=0.5):
         """
         Makes a salt and pepper texture using the provided colors.
         :param dimensions: The Textures dimensions

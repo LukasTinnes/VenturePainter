@@ -1,11 +1,13 @@
 from src.Intrepreter import Interpreter
 from src.Loader import Loader
 from src.Painter import Painter
+import logging
 
 if __name__ == "__main__":
+    logging.basicConfig(filename='example.log', level=logging.INFO)
     loader = Loader("../Resources/")
-    background, r_w, r_h = loader.load("complex.svg")
-    print(background, r_w, r_h)
+    background = loader.load("complex.svg")
+    print(background)
     #interpreter = Interpreter()
     #hierarchy = interpreter.interpret(background, shapes)
     #painter = Painter()

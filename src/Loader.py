@@ -1,12 +1,14 @@
-import xml.etree.ElementTree as ET
 import re
-from src.Shapes.Rectangle import Rectangle
-from src.SurfaceInfo import SurfaceInfo
+import xml.etree.ElementTree as ET
+
 import numpy as np
 from Engine.Camera import Camera
 
+from src.Shapes.Rectangle import Rectangle
+from src.SurfaceInfo import SurfaceInfo
 
-class Loader:
+
+class Loader(object):
     """
     The Loader class loads an SVG file and translates it into Shape objects of the Engine
     """

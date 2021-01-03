@@ -1,7 +1,8 @@
 import math
 import random
 
-from PIL import Image
+import cv2
+import numpy as np
 
 
 class Texture:
@@ -9,18 +10,28 @@ class Texture:
     def __init__(self, image):
         self.image = image
 
-    def stochastic(self, dimensions):
-        img = Image.new("RGB", dimensions)
-        width, height = self.image.size
-        pixels_img = self.image.load()
-        pixels_new_img = img.load()
+    def saltAndPepper(self, dimensions, salt=None, pepper=None, p=0.5):
+        """
+        Makes a salt and pepper texture using the provided colors.
+        :param dimensions: The Textures dimensions
+        :param salt: The salt texture
+        :param pepper: The pepper texture
+        :param p: The probability that a pixel is salt
+        :return:
+        """
+        if salt is None:
+            salt = np.array([0, 0, 0])
+        if pepper is None:
+            pepper = np.array([255, 255, 255])
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
 
         for x in range(dimensions[0]):
             for y in range(dimensions[1]):
-                x_rand = random.randint(0, width - 1)
-                y_rand = random.randint(0, height - 1)
-                pixels_new_img[x, y] = pixels_img[x_rand, y_rand]
-
+                if random.random() < p:
+                    img[x, y] = salt
+                else:
+                    img[x, y] = pepper
         return img
 
     def tiles(self, dimensions):

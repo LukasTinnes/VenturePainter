@@ -9,12 +9,10 @@ class Loader(object):
     The Loader class loads an SVG file and translates it into Shape objects of the Engine
     """
 
-    def __init__(self, path):
+    def __init__(self):
         """
         Initialises the loader for a given folder
-        :param path: Path to the svg image that is to be painted
         """
-        self.path = path
         self.id_count = 0
 
     def load(self, filename):

@@ -1,8 +1,8 @@
 import math
 import random
-
 import numpy as np
-
+import noise
+from noise.perlin import SimplexNoise
 
 class Texture:
 
@@ -14,8 +14,8 @@ class Texture:
         """
         Makes a salt and pepper texture using the provided colors.
         :param dimensions: The Textures dimensions
-        :param salt: The salt texture
-        :param pepper: The pepper texture
+        :param salt: The salt color
+        :param pepper: The pepper color
         :param p: The probability that a pixel is salt
         :return:
         """
@@ -32,6 +32,21 @@ class Texture:
                     img[x, y] = salt
                 else:
                     img[x, y] = pepper
+        return img
+
+    @staticmethod
+    def condiments(dimensions, condiments):
+        """
+        Makes a salt and pepper texture using multiple colors with the same proability
+        :param dimensions: The Textures dimensions
+        :param condiments: The colors to choose from
+        """
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                img[x, y] = random.choice(condiments)
         return img
 
     def tiles(self, dimensions):

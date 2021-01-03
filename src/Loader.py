@@ -1,5 +1,6 @@
 import logging
 import xml.etree.ElementTree as ET
+from src.Shape import Shape
 
 import planar
 
@@ -50,14 +51,20 @@ class Loader(object):
             child_y = float(child_attrib["y"])
             child_width = float(child_attrib["width"])
             child_height = float(child_attrib["height"])
+            child_color = int(child_attrib["fill"][1:], 16)
 
             # Build BBox
             maximum = planar.Vec2(child_x + child_width, child_y + child_height)
             minimum = planar.Vec2(child_x, child_y)
             box = planar.BoundingBox([minimum, maximum])
 
+            # Build Shape
+
+            shape = Shape(box, self.id_count, child_color)
+            self.id_count += 1
+
             # Append to shappe list
-            shapes.append(box)
-            logging.info(f"Loaded child {box}")
+            shapes.append(shape)
+            logging.info(f"Loaded child {shape}")
         logging.info(f"loaded all children")
         return shapes

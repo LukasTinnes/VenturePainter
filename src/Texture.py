@@ -10,6 +10,7 @@ class Texture:
     def __init__(self, image):
         self.image = image
 
+    @staticmethod
     def saltAndPepper(self, dimensions, salt=None, pepper=None, p=0.5):
         """
         Makes a salt and pepper texture using the provided colors.

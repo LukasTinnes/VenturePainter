@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import planar
+import logging
 
 
 class Loader(object):
@@ -24,6 +25,11 @@ class Loader(object):
         return self._load_svg(filename)
 
     def _load_svg(self, filename):
+        """
+        Loads Objects from SVG file
+        :param filename:
+        :return:
+        """
         tree = ET.parse(self.path + filename)
         root = tree.getroot()
 
@@ -36,6 +42,7 @@ class Loader(object):
         shapes = []
 
         # Create bounding boxes from children
+        logging.info(f"Detected {len(root)} children. Loading")
         for child in root:
             # TODO other shapes
             # Extract parameters
@@ -52,4 +59,6 @@ class Loader(object):
 
             # Append to shappe list
             shapes.append(box)
+            logging.info(f"Loaded child {box}")
+        logging.info(f"loaded all children")
         return shapes

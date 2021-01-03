@@ -1,6 +1,7 @@
-import xml.etree.ElementTree as ET
-import planar
 import logging
+import xml.etree.ElementTree as ET
+
+import planar
 
 
 class Loader(object):
@@ -30,7 +31,7 @@ class Loader(object):
         :param filename:
         :return:
         """
-        tree = ET.parse(self.path + filename)
+        tree = ET.parse(filename)
         root = tree.getroot()
 
         # Load information on background size

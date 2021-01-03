@@ -1,4 +1,7 @@
 from src.Node import Node
+from src.Shape import Shape
+from typing import List
+import logging
 
 
 class Interpreter(object):
@@ -7,37 +10,37 @@ class Interpreter(object):
     depending on the objects' fuzzyness and surfaces.
     """
 
-    def __init__(self):
-        pass
+    def interpret(self, shapes:List[Shape]):
+        logging.info(f"Creating hierarchy. There are {len(shapes)} nodes to order")
+        graph = []
 
-    def interpret(self, background, shapes):
-        graph = [Node(hash(background))]
         for shape in shapes:
-            node = Node(hash(shape))
+            # Make node
+            node = Node(shape.id)
+            logging.info(f"Computing Node relationship {shape.id+1} of {len(shapes)}")
+
+            # Find other nodes node points to
             for graph_node in graph:
-                # If background then just point background to object and break
-                if hash(graph_node) == hash(background) and hash(shape) != hash(background):
-                    graph_node.point_to(node.get_identifier())
-                    continue
-                else:
-                    node_shape = shapes[hash(node)]
-                    node_bbox = node_shape.get_bounding_box()
-                    graph_node_shape = shapes[hash(graph_node)]
-                    graph_node_bbox = graph_node_shape.get_bounding_box()
-                    # Case overlapping
-                    if node_bbox.overlaps(node_bbox, graph_node_bbox):
-                        # Case A in B
-                        if node_bbox.overlaps_completely(graph_node_bbox):
-                            # B points to A
-                            node.point_to(graph_node.get_identifier())
-                        # Case B in A
-                        if graph_node_bbox.overlaps_completely(node_bbox):
-                            # A points to B
-                            graph_node.point_to(node.get_identifier())
-                        else:
-                            # A points to B and B points to A
-                            graph_node.point_to(node.get_identifier())
-                            node.point_to(graph_node.get_identifier())
-            # Else no pointers, lastly append node to graph
+                graph_node_id = graph_node.identifier
+                graph_node_shape = shapes[graph_node_id].shape
+                node_shape = shape.shape
+                # Test if the two shapes overlap and have therefore a dependent relationship
+                if node_shape.colliderect(graph_node_shape):
+                    # Test if One contains the other
+                    if node_shape.contains(graph_node_shape):
+                        # Graph node is in Node
+                        node.point_to(graph_node_id)
+                    elif graph_node_shape.contains(node_shape):
+                        # Node is in Graph node
+                        graph_node.point_to(node.identifier)
+                    else:
+                        # The two don't contain each other, but collide
+                        graph_node.point_to(node.identifier)
+                        node.point_to(graph_node_id)
+                # There is no else case, since not overlapping nodes don't point to each other
+            # Append Nodes to graph
             graph.append(node)
+        logging.info(f"Created hierarchy!")
+
         return graph
+

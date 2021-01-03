@@ -21,7 +21,7 @@ if __name__ == "__main__":
     loader = Loader()
     shapes = loader.load(root.filename)
     interpreter = Interpreter()
-    #hierarchy = interpreter.interpret(shapes)
+    hierarchy = interpreter.interpret(shapes)
     #painter = Painter()
     #img = painter.paint(hierarchy, background, shapes, camera)
     #img.show()

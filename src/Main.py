@@ -12,7 +12,10 @@ import cv2
 if __name__ == "__main__":
     from src.Texture import Texture
     import numpy as np
-    cv2.imshow("Title", Texture.condiments([500,500],[np.array([1,0,0]),np.array([0,1,0]), np.array([0,0,1])]))
+    #imgb = Texture.saltAndPepper([500, 500])
+    imga = Texture.simplexNoise([500,500], scale_x=50, scale_y=50)
+
+    cv2.imshow("Title", imga)
     cv2.waitKey(0)
     logging.basicConfig(filename='log.log', level=logging.INFO)
     logging.info(f"started execution at {datetime.datetime.now()}")

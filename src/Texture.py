@@ -22,7 +22,7 @@ class Texture:
         if salt is None:
             salt = np.array([0, 0, 0])
         if pepper is None:
-            pepper = np.array([255, 255, 255])
+            pepper = np.array([1, 1, 1])
 
         img = np.empty((dimensions[0], dimensions[1], 3))
 
@@ -47,6 +47,22 @@ class Texture:
         for x in range(dimensions[0]):
             for y in range(dimensions[1]):
                 img[x, y] = random.choice(condiments)
+        return img
+
+    @staticmethod
+    def simplexNoise(dimensions, scale_x=1, scale_y=1):
+        """
+        Makes a salt and pepper texture using multiple colors with the same proability
+        :param dimensions: The Textures dimensions
+        :param condiments: The colors to choose from
+        """
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                color = (SimplexNoise().noise2(x/scale_x, y/scale_y)+1)/2
+                img[x, y] = np.array([color]*3)
         return img
 
     def tiles(self, dimensions):

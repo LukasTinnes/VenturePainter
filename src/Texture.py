@@ -1,7 +1,7 @@
 import math
 import random
 import numpy as np
-import noise
+import math
 from noise.perlin import SimplexNoise
 
 class Texture:
@@ -63,6 +63,39 @@ class Texture:
             for y in range(dimensions[1]):
                 color = (SimplexNoise().noise2(x/scale_x, y/scale_y)+1)/2
                 img[x, y] = np.array([color]*3)
+        return img
+
+    @staticmethod
+    def sine(dimensions, scale=1):
+        """
+        Makes a salt and pepper texture using multiple colors with the same proability
+        :param dimensions: The Textures dimensions
+        :param condiments: The colors to choose from
+        """
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                color = (math.sin(x*scale)+1)/2
+                img[x, y] = np.array([color]*3)
+        return img
+
+    @staticmethod
+    def sine_perlin(dimensions, perlin_scale=1, sine_scale=1, randomness=0):
+        """
+        Makes a salt and pepper texture using multiple colors with the same proability
+        :param dimensions: The Textures dimensions
+        :param condiments: The colors to choose from
+        """
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                perlin = (SimplexNoise().noise2(x / perlin_scale, y / perlin_scale) + 1)*randomness
+                sine = (math.sin(x*sine_scale+perlin)+1)/2
+                img[x, y] = np.array([sine]*3)
         return img
 
     def tiles(self, dimensions):

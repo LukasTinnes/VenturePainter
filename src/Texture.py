@@ -82,6 +82,39 @@ class Texture:
         return img
 
     @staticmethod
+    def circle(dimensions, scale=1):
+        """
+        Makes a salt and pepper texture using multiple colors with the same proability
+        :param dimensions: The Textures dimensions
+        :param condiments: The colors to choose from
+        """
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                color = (math.cos(x*scale)+math.sin(y*scale)+2)/4
+                img[x, y] = np.array([color]*3)
+        return img
+
+    @staticmethod
+    def circle_perlin(dimensions, circle_scale=1, perlin_scale=1, randomness=1):
+        """
+        Makes a salt and pepper texture using multiple colors with the same proability
+        :param dimensions: The Textures dimensions
+        :param condiments: The colors to choose from
+        """
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                perlin = (SimplexNoise().noise2(x / perlin_scale, y / perlin_scale) + 1) * randomness
+                color = (math.cos(x*circle_scale+perlin)+math.sin(y*circle_scale+perlin)+2)/4
+                img[x, y] = np.array([color]*3)
+        return img
+
+    @staticmethod
     def sine_perlin(dimensions, perlin_scale=1, sine_scale=1, randomness=0):
         """
         Makes a salt and pepper texture using multiple colors with the same proability

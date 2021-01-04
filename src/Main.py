@@ -13,7 +13,8 @@ if __name__ == "__main__":
     from src.Texture import Texture
     import numpy as np
     #img = Texture.simplexNoise([500,500], scale_x=50, scale_y=50)
-    img = Texture.sine_perlin([500,500], sine_scale=0.1, perlin_scale=20, randomness=20)
+    #img = Texture.sine_perlin([500,500], sine_scale=0.1, perlin_scale=20, randomness=20)
+    img = Texture.circle_perlin([500, 500], perlin_scale=100, circle_scale=0.01)
 
     cv2.imshow("Title", img)
     cv2.waitKey(0)

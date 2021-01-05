@@ -1,55 +1,55 @@
 from typing import List
-import numpy as np
-from typing import List
 
 import numpy as np
-from PIL import ImageDraw
 from pygame import Rect
 
 from src.Node import Node
+from src.Shape import Shape
 from src.Texture import Texture
 
 
-def get_draw_coords(shape):
-    # Todo png image coordinates from shape coordinates
-    pass
-
-
 def get_splices(viewing_window, shape):
-    # Case 1 (Overlap top right corner
-    if shape.left < viewing_window.left and shape.top < viewing_window.top:
-        pass
-    # Case 2 (Overlap top edge)
-    if shape.top < viewing_window.top and not (shape.right > viewing_window.right or shape.left < viewing_window.left):
-        pass
-    # Case 3 (Overlap top right)
-    if shape.top < viewing_window.top and shape.right > viewing_window.right:
-        pass
-    # Case 4 (Overlap left edge)
-    if shape.left < viewing_window.left and not (
-            shape.bottom > viewing_window.bottom or shape.top < viewing_window.top):
-        pass
-    # Case 5 (Overlap Right Edge)
-    if shape.right > viewing_window.right and not (
-            shape.bottom > viewing_window.bottom or shape.top < viewing_window.top):
-        pass
-    # Case 6 (Overlap bottom left)
-    if shape.left < viewing_window.left and shape.bottom > viewing_window.bottom:
-        pass
-    # Case 7 (Overlap Bottom Edge)
-    if shape.bottom > viewing_window.bottom and not (
-            shape.left < viewing_window.left or shape.right > viewing_window.right):
-        pass
-    # Case 8 (Overlap bottom right)
-    if shape.bottom > viewing_window.bottom and shape.right > viewing_window.right:
-        pass
-    # Case shape completely in viewing_window
-    else:
-        # Move slices to image slices
-        row_splices = [shape.left - viewing_window.left, shape.right - viewing_window.left]
-        column_splices = [shape.top - viewing_window.top, shape.bottom - viewing_window.top]
-    return (row_splices, column_splices)
-
+    # x1 is either 0 (overlap left side), or shape left minus vw left
+    x1_index = np.maximum(0, shape.left - viewing_window.left)
+    # x2 is either vw.width (overlap right side), or x_1_index + shape.width
+    x2_index = np.minimum(viewing_window.width, shape.width + x1_index)
+    # y1 is either 0 (overlap top) or shape.top-vw.top
+    y1_index = np.maximum(0, shape.top - viewing_window.top)
+    # y2 is either vw.height (overlap bottom side) or y1+shape.height
+    y2_index = np.minimum(viewing_window.height, y1_index + shape.height)
+    return x1_index, x2_index, y1_index, y2_index
+    # # Case 1 (Overlap top right corner
+    # if shape.left < viewing_window.left and shape.top < viewing_window.top:
+    #     pass
+    # # Case 2 (Overlap top edge)
+    # if shape.top < viewing_window.top and not (shape.right > viewing_window.right or shape.left < viewing_window.left):
+    #     pass
+    # # Case 3 (Overlap top right)
+    # if shape.top < viewing_window.top and shape.right > viewing_window.right:
+    #     pass
+    # # Case 4 (Overlap left edge)
+    # if shape.left < viewing_window.left and not (
+    #         shape.bottom > viewing_window.bottom or shape.top < viewing_window.top):
+    #     pass
+    # # Case 5 (Overlap Right Edge)
+    # if shape.right > viewing_window.right and not (
+    #         shape.bottom > viewing_window.bottom or shape.top < viewing_window.top):
+    #     pass
+    # # Case 6 (Overlap bottom left)
+    # if shape.left < viewing_window.left and shape.bottom > viewing_window.bottom:
+    #     pass
+    # # Case 7 (Overlap Bottom Edge)
+    # if shape.bottom > viewing_window.bottom and not (
+    #         shape.left < viewing_window.left or shape.right > viewing_window.right):
+    #     pass
+    # # Case 8 (Overlap bottom right)
+    # if shape.bottom > viewing_window.bottom and shape.right > viewing_window.right:
+    #     pass
+    # # Case shape completely in viewing_window
+    # else:
+    #     # Move slices to image slices
+    #     row_splices = [shape.left - viewing_window.left, shape.right - viewing_window.left]
+    #     column_splices = [shape.top - viewing_window.top, shape.bottom - viewing_window.top]
 
 class Painter:
     """
@@ -60,7 +60,7 @@ class Painter:
     def __init__(self):
         pass
 
-    def paint(self, hierarchy: List[Node], shapes: List[Rect], viewing_window: Rect):
+    def paint(self, hierarchy: List[Node], shapes: List[Shape], viewing_window: Rect):
         """
         Paints an image based on a relationship graph provided
         :param hierarchy: interpreted shape hierarchy
@@ -68,20 +68,22 @@ class Painter:
         :param viewing_window: viewing window of the hierarchy shapes
         :return: png
         """
-        img = np.zeroes((int(viewing_window.width), int(viewing_window.height), 3))
+        img = np.zeros((int(viewing_window.width), int(viewing_window.height), 3))
         # Fun mode
         # img = np.empty((viewing_window.height, viewing_window.width, 3))
         drawn_shapes = [shape for shape in shapes if
-                        viewing_window.contains(shape) or viewing_window.colliderect(shape)]
-        draw = ImageDraw.ImageDraw(img)
+                        viewing_window.contains(shape.shape) or viewing_window.colliderect(shape.shape)]
         hs = list(zip(hierarchy, drawn_shapes))
         for i in range(len(hs)):
             node = hs[i][0]
             shape = hs[i][1]
-            texture = Texture.condiments([shape.width, shape.height],
+            texture = Texture.condiments([shape.shape.width, shape.shape.height],
                                          [(255, 0, 0), (255, 255, 0), (255, 0, 255), (0, 255, 0), (0, 0, 255)])
-            splices = get_splices(viewing_window, shape)
-            img[splices] = texture
+            # Get indices
+            x1, x2, y1, y2 = get_splices(viewing_window, shape.shape)
+            # Reshape the texture to fit (hopefully
+            resize = np.resize(texture, (x2 - x1, y2 - y1, 3))
+            img[x1:x2, y1:y2] = resize
         # for i in range(len(hs)):
         #     shape = hs[i][1]
         #     node = hs[i][0]

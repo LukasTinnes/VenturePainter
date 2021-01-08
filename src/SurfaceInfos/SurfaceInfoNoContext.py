@@ -12,7 +12,7 @@ class SurfaceInfoNoContext(SurfaceInfo):
         super().__init__(function_name, args)
 
     def paint(self, hierarchy, shapes, shape):
-        return getattr(Texture, self.function_name)((shape.shape.width, shape.shape.height), *self.args)
+        return getattr(Texture, self.function_name)((shape.shape.width, shape.shape.height), **self.args)
 
     def to_json(self):
         """

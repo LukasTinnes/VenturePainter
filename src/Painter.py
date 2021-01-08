@@ -20,38 +20,6 @@ def get_splices(viewing_window, shape):
     # y2 is either vw.height (overlap bottom side) or y1+shape.height
     y2_index = np.minimum(viewing_window.height, y1_index + shape.height)
     return x1_index, x2_index, y1_index, y2_index
-    # # Case 1 (Overlap top right corner
-    # if shape.left < viewing_window.left and shape.top < viewing_window.top:
-    #     pass
-    # # Case 2 (Overlap top edge)
-    # if shape.top < viewing_window.top and not (shape.right > viewing_window.right or shape.left < viewing_window.left):
-    #     pass
-    # # Case 3 (Overlap top right)
-    # if shape.top < viewing_window.top and shape.right > viewing_window.right:
-    #     pass
-    # # Case 4 (Overlap left edge)
-    # if shape.left < viewing_window.left and not (
-    #         shape.bottom > viewing_window.bottom or shape.top < viewing_window.top):
-    #     pass
-    # # Case 5 (Overlap Right Edge)
-    # if shape.right > viewing_window.right and not (
-    #         shape.bottom > viewing_window.bottom or shape.top < viewing_window.top):
-    #     pass
-    # # Case 6 (Overlap bottom left)
-    # if shape.left < viewing_window.left and shape.bottom > viewing_window.bottom:
-    #     pass
-    # # Case 7 (Overlap Bottom Edge)
-    # if shape.bottom > viewing_window.bottom and not (
-    #         shape.left < viewing_window.left or shape.right > viewing_window.right):
-    #     pass
-    # # Case 8 (Overlap bottom right)
-    # if shape.bottom > viewing_window.bottom and shape.right > viewing_window.right:
-    #     pass
-    # # Case shape completely in viewing_window
-    # else:
-    #     # Move slices to image slices
-    #     row_splices = [shape.left - viewing_window.left, shape.right - viewing_window.left]
-    #     column_splices = [shape.top - viewing_window.top, shape.bottom - viewing_window.top]
 
 
 def random_colors():
@@ -88,7 +56,7 @@ class Painter:
             node = hs[i][0]
             shape = hs[i][1]
             logging.info(f"Generating texture for shape {shape.id} with kind {shape.kind}")
-            texture = action_dict[shape.kind](hierarchy, shapes, shape)
+            texture = action_dict[shape.kind].paint(hierarchy, shapes, shape)
             # Get indices
             logging.info(f"Getting indices for shape {shape} and viewing window {viewing_window}")
             x1, x2, y1, y2 = get_splices(viewing_window, shape.shape)

@@ -4,6 +4,7 @@ import numpy as np
 import math
 from noise.perlin import SimplexNoise
 
+
 class Texture:
 
     def __init__(self, image):

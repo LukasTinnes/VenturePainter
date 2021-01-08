@@ -1,11 +1,13 @@
+import logging
+import random
 from typing import List
 
+import cv2
 import numpy as np
 from pygame import Rect
 
 from src.Node import Node
 from src.Shape import Shape
-from src.Texture import Texture
 
 
 def get_splices(viewing_window, shape):
@@ -51,6 +53,13 @@ def get_splices(viewing_window, shape):
     #     row_splices = [shape.left - viewing_window.left, shape.right - viewing_window.left]
     #     column_splices = [shape.top - viewing_window.top, shape.bottom - viewing_window.top]
 
+
+def random_colors():
+    colors = [(0, 0, 1), (0, 1, 0)]
+    samples = random.sample(colors, 2)
+    return samples
+
+
 class Painter:
     """
     Paints a picture/thing based on the given hierarchy, which was build in Interpreter.py
@@ -60,7 +69,7 @@ class Painter:
     def __init__(self):
         pass
 
-    def paint(self, hierarchy: List[Node], shapes: List[Shape], viewing_window: Rect):
+    def paint(self, hierarchy: List[Node], shapes: List[Shape], viewing_window: Rect, action_dict):
         """
         Paints an image based on a relationship graph provided
         :param hierarchy: interpreted shape hierarchy
@@ -77,11 +86,13 @@ class Painter:
         for i in range(len(hs)):
             node = hs[i][0]
             shape = hs[i][1]
-            texture = Texture.condiments([shape.shape.width, shape.shape.height],
-                                         [(255, 0, 0), (255, 255, 0), (255, 0, 255), (0, 255, 0), (0, 0, 255)])
+            logging.info(f"Generating texture for shape {shape.id} with kind {shape.kind}")
+            texture = action_dict[shape.kind](hierarchy, shapes, shape)
             # Get indices
+            logging.info(f"Getting indices for shape {shape} and viewing window {viewing_window}")
             x1, x2, y1, y2 = get_splices(viewing_window, shape.shape)
-            # Reshape the texture to fit (hopefully
+            # Reshape the texture to fit (hopefully)
+            logging.info(f"Indices are {x1}, {x2}, {y1}, {y2}")
             resize = np.resize(texture, (x2 - x1, y2 - y1, 3))
             img[x1:x2, y1:y2] = resize
         # for i in range(len(hs)):
@@ -89,4 +100,4 @@ class Painter:
         #     node = hs[i][0]
         #     anchor = camera.world_to_cam([shape.left, shape.up])
         #     draw.text((anchor[0], anchor[1]), f"{hash(shape)}", fill=(255, 255, 255))
-        return img
+        return cv2.flip(cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE), 1)

@@ -1,1 +1,5 @@
-{"#00ff00":{"kind":"NoContext", "name":"saltAndPepper", "args":[]}}
+{
+  "#00ff00":{"kind":"NoContext", "name":"saltAndPepper", "args":[]},
+  "#0000ff":{"kind":"NoContext", "name":"saltAndPepper", "args":[]},
+  "#ff0000":{"kind":"NoContext", "name":"saltAndPepper", "args":[]}
+}

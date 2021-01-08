@@ -4,6 +4,8 @@ import os
 from tkinter import *
 from tkinter import filedialog
 
+import cv2
+
 import pygame
 import json
 from src.Intrepreter import Interpreter
@@ -37,3 +39,5 @@ if __name__ == "__main__":
     painter = Painter()
     viewing_window = pygame.Rect(0, 0, 500, 500)
     img = painter.paint(hierarchy, shapes, viewing_window, action_dict)
+    cv2.imshow("result", img)
+    cv2.waitKey(0)

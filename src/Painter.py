@@ -72,6 +72,7 @@ class Painter:
     def paint(self, hierarchy: List[Node], shapes: List[Shape], viewing_window: Rect, action_dict):
         """
         Paints an image based on a relationship graph provided
+        :param action_dict: dict of kind -> texture function each texture function gets (hierarchy, shapes and shape)
         :param hierarchy: interpreted shape hierarchy
         :param shapes: list of shapes read by the Loader
         :param viewing_window: viewing window of the hierarchy shapes

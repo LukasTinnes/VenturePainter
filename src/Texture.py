@@ -11,6 +11,17 @@ class Texture:
         self.image = image
 
     @staticmethod
+    def flat(dimensions, color=None):
+        if color is None:
+            color = np.array([1, 1, 1])
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                img[x,y] = color
+        return img
+
+    @staticmethod
     def saltAndPepper(dimensions, salt=None, pepper=None, p=0.5):
         """
         Makes a salt and pepper texture using the provided colors.

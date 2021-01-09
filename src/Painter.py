@@ -8,6 +8,7 @@ from pygame import Rect
 
 from src.Node import Node
 from src.Shape import Shape
+from src.Graph import Graph
 
 
 def get_splices(viewing_window, shape):
@@ -37,7 +38,7 @@ class Painter:
     def __init__(self):
         pass
 
-    def paint(self, hierarchy: List[Node], shapes: List[Shape], viewing_window: Rect, action_dict):
+    def paint(self, hierarchy: Graph, shapes: List[Shape], viewing_window: Rect, action_dict):
         """
         Paints an image based on a relationship graph provided
         :param action_dict: dict of kind -> texture function each texture function gets (hierarchy, shapes and shape)
@@ -51,7 +52,7 @@ class Painter:
         # img = np.empty((viewing_window.height, viewing_window.width, 3))
         drawn_shapes = [shape for shape in shapes if
                         viewing_window.contains(shape.shape) or viewing_window.colliderect(shape.shape)]
-        hs = list(zip(hierarchy, drawn_shapes))
+        hs = list(zip(hierarchy.nodes, drawn_shapes))
         for i in range(len(hs)):
             node = hs[i][0]
             shape = hs[i][1]

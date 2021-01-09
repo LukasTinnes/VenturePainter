@@ -66,7 +66,7 @@ class Loader:
 
             # Build Shape
             box = pygame.Rect(child_x, child_y, child_width, child_height)
-            shape = Shape(box, self.id_count, child_color)
+            shape = Shape(box, self.id_count)
             self.id_count += 1
 
             # Append to shappe list
@@ -78,12 +78,13 @@ class Loader:
     def _load_img(self, filename):
         img = cv2.imread(filename)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        contours, hierarchy = cv2.findContours(gray, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)[-2:] # TODO this is primitive look up how it works
+        _ , binary = cv2.threshold(gray, 240, 256, cv2.THRESH_BINARY)
+        contours, hierarchy = cv2.findContours(binary, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)[-2:] # TODO this is primitive look up how it works
         shapes = []
         for cnt in contours:
             x, y, w, h = cv2.boundingRect(cnt)
             box = pygame.Rect(x, y, w, h)
-            shape = Shape(box, self.id_count, "#00ff00") # TODO Fixed kind
+            shape = Shape(box, self.id_count)
             self.id_count += 1
             shapes.append(shape)
             logging.info(f"Loaded child {shape}")

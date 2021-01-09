@@ -4,14 +4,18 @@ import os
 from tkinter import *
 from tkinter import filedialog
 
-import cv2
-
 import pygame
 import json
 from src.Intrepreter import Interpreter
 from src.Loader import Loader
 from src.Painter import Painter
 from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
+#from src.Themes.UniformTheme import UniformTheme as Theme
+from src.Themes.NeighborTheme import NeighborTheme as Theme
+import matplotlib
+matplotlib.use("TkAgg")
+from matplotlib import pyplot as plt
+
 
 if __name__ == "__main__":
     logging.basicConfig(filename='log.log', level=logging.INFO)
@@ -27,7 +31,7 @@ if __name__ == "__main__":
     logging.info(f"Acquired file name")
 
 
-    with open("info.json") as file:
+    with open("Themes/neighbor.json") as file:
         js = json.load(file)
     action_dict = {key: SurfaceInfoNoContext.from_json(js[key]) for key in js.keys()}
     logging.info("Loaded action dict")
@@ -36,8 +40,10 @@ if __name__ == "__main__":
     shapes = loader.load(root.filename)
     interpreter = Interpreter()
     hierarchy = interpreter.interpret(shapes)
+    theme = Theme()
+    interpreter.determine_kind(hierarchy, shapes, theme)
     painter = Painter()
     viewing_window = pygame.Rect(0, 0, 500, 500)
     img = painter.paint(hierarchy, shapes, viewing_window, action_dict)
-    cv2.imshow("result", img)
-    cv2.waitKey(0)
+    plt.imshow(img, interpolation='bicubic')
+    plt.show()

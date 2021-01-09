@@ -76,6 +76,7 @@ class Loader:
         return shapes
 
     def _load_img(self, filename):
+        print(filename)
         img = cv2.imread(filename)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         _ , binary = cv2.threshold(gray, 240, 256, cv2.THRESH_BINARY)

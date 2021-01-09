@@ -2,6 +2,8 @@ import logging
 import xml.etree.ElementTree as ET
 from src.Shape import Shape
 from typing import List
+import cv2
+import os
 
 import pygame
 
@@ -23,7 +25,15 @@ class Loader:
         :param filename: filename of the svg image (in the resource folder)
         """
         #TODO fileending descrimination
-        return self._load_svg(filename)
+        path, extension = os.path.splitext(filename)
+        if extension == ".svg":
+            return self._load_svg(filename)
+        elif extension == ".png" or extension == ".jpg" or extension == ".jpeg":
+            return self._load_img(filename)
+        else:
+            raise Exception(f"Unknown file ending {extension}")
+
+    im = cv2.imread('test_black.png')
 
     def _load_svg(self, filename:str) -> List[Shape]:
         """
@@ -64,3 +74,18 @@ class Loader:
             logging.info(f"Loaded child {shape}")
         logging.info(f"loaded all children")
         return shapes
+
+    def _load_img(self, filename):
+        img = cv2.imread(filename)
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        contours, hierarchy = cv2.findContours(gray, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)[-2:] # TODO this is primitive look up how it works
+        shapes = []
+        for cnt in contours:
+            x, y, w, h = cv2.boundingRect(cnt)
+            box = pygame.Rect(x, y, w, h)
+            shape = Shape(box, self.id_count, "#00ff00") # TODO Fixed kind
+            self.id_count += 1
+            shapes.append(shape)
+            logging.info(f"Loaded child {shape}")
+        logging.info(f"loaded all children")
+        return shapes[:-1] # TODO background

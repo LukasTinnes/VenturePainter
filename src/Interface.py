@@ -13,6 +13,7 @@ from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
 from src.Themes.UniformTheme import UniformTheme
 from src.Themes.NeighborTheme import NeighborTheme
 import matplotlib
+from matplotlib.image import imsave
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 from matplotlib.widgets import Button, RadioButtons
@@ -28,21 +29,32 @@ class Interface:
         # GUI Elements
         self.radio_labels = ["Uniform", "Neighbor"]
 
+        self.img = None
+
         self.fig = plt.figure()
-        self.gridspec = gridspec.GridSpec(2,2, height_ratios=[0.1,0.9], width_ratios=[0.9,0.1])
+        self.gridspec = gridspec.GridSpec(3,2, height_ratios=[0.1, 0.1, 0.9], width_ratios=[0.9,0.1])
 
         self.img_ax = self.fig.add_subplot(self.gridspec[:,0])
         self.calculate_button_ax = self.fig.add_subplot(self.gridspec[0,1])
-        self.radio_button_ax = self.fig.add_subplot(self.gridspec[1,1])
+        self.save_button_ax = self.fig.add_subplot(self.gridspec[1,1])
+        self.radio_button_ax = self.fig.add_subplot(self.gridspec[2,1])
 
         self.radio_buttons = RadioButtons(self.radio_button_ax, self.radio_labels)
         self.calculateButton = Button(self.calculate_button_ax, "Calculate")
+        self.saveButton = Button(self.save_button_ax, "Save")
 
         def calculate(*args):
             filename = self.get_filename()
-            img = self.generate_img(filename)
-            self.img_ax.imshow(img)
+            self.img = self.generate_img(filename)
+            self.img_ax.imshow(self.img)
         self.calculateButton.on_clicked(calculate)
+
+        def save(*args):
+            if self.img is not None:
+                imsave("yee.png", self.img)
+                print("saved")
+        self.saveButton.on_clicked(save)
+
 
     def run(self):
         logging.basicConfig(filename='log.log', level=logging.INFO)

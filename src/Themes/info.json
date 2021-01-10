@@ -1,5 +1,0 @@
-{
-  "#00ff00":{"kind":"NoContext", "name":"simplexNoise", "args":{}},
-  "#0000ff":{"kind":"NoContext", "name":"saltAndPepper", "args":{"p":0.99}},
-  "#ff0000":{"kind":"NoContext", "name":"saltAndPepper", "args":{}}
-}

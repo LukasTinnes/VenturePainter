@@ -44,7 +44,10 @@ class Interface:
         self.saveButton = Button(self.save_button_ax, "Save")
 
         def calculate(*args):
-            filename = self.get_filename()
+            filename = self.get_filename([("SVG-Image", "*.svg"), ("png image", "*.png"),
+                                           ("jpg image", "*.jpg *.jpeg"),
+                                           ("tagged image file", "*.tiff *.tif"),
+                                           ("All files", "*.*")], "Select image")
             self.img = self.generate_img(filename)
             self.img_ax.imshow(self.img)
         self.calculateButton.on_clicked(calculate)
@@ -62,20 +65,11 @@ class Interface:
 
         plt.show()
 
-        file_name = self.get_filename()
-        img = self.generate_img(file_name)
-
-        plt.imshow(img, interpolation='bicubic')
-        plt.show()
-
-    def get_filename(self):
+    def get_filename(self, endings, title):
         root = Tk()
         root.withdraw()
-        root.filename = filedialog.askopenfilename(initialdir="../", title="Select file",
-                                                   filetypes=[("SVG-Image", "*.svg"), ("png image", "*.png"),
-                                                              ("jpg image", "*.jpg *.jpeg"),
-                                                              ("tagged image file", "*.tiff *.tif"),
-                                                              ("All files", "*.*")])
+        root.filename = filedialog.askopenfilename(initialdir="../", title=title,
+                                                   filetypes=endings)
         logging.info(f"Acquired file name")
         return root.filename
 
@@ -96,12 +90,13 @@ class Interface:
         return painter.paint(hierarchy, shapes, viewing_window, action_dict)
 
     def get_theme(self):
+        file_name = self.get_filename([("json theme", "*.json"), ("All files", "*.*")], "Select theme")
         if self.radio_buttons.value_selected == self.radio_labels[0]:
-            with open("Themes/uniform.json") as file:
+            with open(file_name) as file:
                 js = json.load(file)
             return UniformTheme(), js
         elif self.radio_buttons.value_selected == self.radio_labels[1]:
-            with open("Themes/neighbor.json") as file:
+            with open(file_name) as file:
                 js = json.load(file)
             return NeighborTheme(), js
         else:

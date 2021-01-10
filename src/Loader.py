@@ -90,4 +90,4 @@ class Loader:
             shapes.append(shape)
             logging.info(f"Loaded child {shape}")
         logging.info(f"loaded all children")
-        return shapes[:-1] # TODO background
+        return shapes

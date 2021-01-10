@@ -80,6 +80,8 @@ class Loader:
         print(filename)
         img = cv2.imread(filename)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        # Filter for image smoothing if needed
+        gray = cv2.bilateralFilter(gray, 10, 50, 50)
         # Canny Edge Detection
         canny_output = cv2.Canny(gray, 100, 200)
         # Try Shape detection by edge detection

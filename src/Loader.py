@@ -1,11 +1,12 @@
 import logging
-import xml.etree.ElementTree as ET
-from src.Shape import Shape
-from typing import List
-import cv2
 import os
+import xml.etree.ElementTree as ET
+from typing import List
 
+import cv2
 import pygame
+
+from src.Shape import Shape
 
 
 class Loader:
@@ -69,7 +70,7 @@ class Loader:
             shape = Shape(box, self.id_count)
             self.id_count += 1
 
-            # Append to shappe list
+            # Append to shape list
             shapes.append(shape)
             logging.info(f"Loaded child {shape}")
         logging.info(f"loaded all children")
@@ -79,8 +80,12 @@ class Loader:
         print(filename)
         img = cv2.imread(filename)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        _ , binary = cv2.threshold(gray, 240, 256, cv2.THRESH_BINARY)
-        contours, hierarchy = cv2.findContours(binary, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)[-2:] # TODO this is primitive look up how it works
+        # Canny Edge Detection
+        canny_output = cv2.Canny(gray, 100, 200)
+        # Try Shape detection by edge detection
+        contours, hierarchy = cv2.findContours(canny_output, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        # This detects whiter objects from black background
+        # From OpenCV Documentation "In OpenCV, finding contours is like finding white object from black background"
         shapes = []
         for cnt in contours:
             x, y, w, h = cv2.boundingRect(cnt)

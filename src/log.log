@@ -1,0 +1,709 @@
+INFO:root:started execution at 2021-01-08 20:31:34.616588
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Detected 2 children. Loading
+INFO:root:Loaded child id:0 kind:red Shape:<rect(50, 50, 200, 100)>
+INFO:root:Loaded child id:1 kind:blue Shape:<rect(260, 50, 150, 80)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 2 nodes to order
+INFO:root:Computing Node relationship 1 of 2
+INFO:root:Computing Node relationship 2 of 2
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind red
+INFO:root:started execution at 2021-01-08 20:40:49.825936
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Detected 2 children. Loading
+INFO:root:Loaded child id:0 kind:red Shape:<rect(50, 50, 200, 100)>
+INFO:root:Loaded child id:1 kind:blue Shape:<rect(260, 50, 150, 80)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 2 nodes to order
+INFO:root:Computing Node relationship 1 of 2
+INFO:root:Computing Node relationship 2 of 2
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind red
+INFO:root:started execution at 2021-01-08 20:41:00.468726
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:#00ff00 Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:#0000ff Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:#ff0000 Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind #00ff00
+INFO:root:Getting indices for shape id:0 kind:#00ff00 Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind #0000ff
+INFO:root:Getting indices for shape id:1 kind:#0000ff Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind #ff0000
+INFO:root:Getting indices for shape id:2 kind:#ff0000 Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 81, 218, 68, 93
+INFO:root:started execution at 2021-01-10 12:05:36.755538
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Detected 2 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(50, 50, 200, 100)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(260, 50, 150, 80)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 2 nodes to order
+INFO:root:Computing Node relationship 1 of 2
+INFO:root:Computing Node relationship 2 of 2
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(50, 50, 200, 100)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 50, 250, 50, 150
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(260, 50, 150, 80)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 260, 410, 50, 130
+INFO:root:started execution at 2021-01-10 12:07:10.696119
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Detected 50 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(160, 852, 1032, 725)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(177, 1697, 200, 464)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(359, 1141, 694, 422)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(251, 1651, 115, 636)>
+INFO:root:Loaded child id:4 kind:None Shape:<rect(186, 1437, 447, 772)>
+INFO:root:Loaded child id:5 kind:None Shape:<rect(441, 1456, 427, 246)>
+INFO:root:Loaded child id:6 kind:None Shape:<rect(379, 1076, 430, 253)>
+INFO:root:Loaded child id:7 kind:None Shape:<rect(498, 129, 1681, 306)>
+INFO:root:Loaded child id:8 kind:None Shape:<rect(8, 295, 788, 102)>
+INFO:root:Loaded child id:9 kind:None Shape:<rect(404, 499, 549, 23)>
+INFO:root:Loaded child id:10 kind:None Shape:<rect(665, 215, 72, 95)>
+INFO:root:Loaded child id:11 kind:None Shape:<rect(419, 264, 88, 372)>
+INFO:root:Loaded child id:12 kind:None Shape:<rect(552, 322, 966, 284)>
+INFO:root:Loaded child id:13 kind:None Shape:<rect(261, 130, 504, 87)>
+INFO:root:Loaded child id:14 kind:None Shape:<rect(948, 468, 29, 10)>
+INFO:root:Loaded child id:15 kind:None Shape:<rect(812, 127, 1720, 71)>
+INFO:root:Loaded child id:16 kind:None Shape:<rect(889, 796, 331, 143)>
+INFO:root:Loaded child id:17 kind:None Shape:<rect(464, 264, 1244, 431)>
+INFO:root:Loaded child id:18 kind:None Shape:<rect(152, 1476, 44, 450)>
+INFO:root:Loaded child id:19 kind:None Shape:<rect(233, 336, 1203, 71)>
+INFO:root:Loaded child id:20 kind:None Shape:<rect(904, 1109, 12, 105)>
+INFO:root:Loaded child id:21 kind:None Shape:<rect(199, 315, 852, 428)>
+INFO:root:Loaded child id:22 kind:None Shape:<rect(83, 295, 1611, 572)>
+INFO:root:Loaded child id:23 kind:None Shape:<rect(358, 1054, 389, 1)>
+INFO:root:Loaded child id:24 kind:None Shape:<rect(120, 78, 671, 37)>
+INFO:root:Loaded child id:25 kind:None Shape:<rect(298, 621, 1085, 402)>
+INFO:root:Loaded child id:26 kind:None Shape:<rect(88, 602, 562, 48)>
+INFO:root:Loaded child id:27 kind:None Shape:<rect(92, 1065, 735, 888)>
+INFO:root:Loaded child id:28 kind:None Shape:<rect(106, 680, 398, 939)>
+INFO:root:Loaded child id:29 kind:None Shape:<rect(121, 188, 1668, 119)>
+INFO:root:Loaded child id:30 kind:None Shape:<rect(156, 790, 416, 205)>
+INFO:root:Loaded child id:31 kind:None Shape:<rect(146, 1170, 423, 383)>
+INFO:root:Loaded child id:32 kind:None Shape:<rect(33, 1221, 512, 448)>
+INFO:root:Loaded child id:33 kind:None Shape:<rect(322, 1518, 91, 142)>
+INFO:root:Loaded child id:34 kind:None Shape:<rect(770, 1305, 496, 171)>
+INFO:root:Loaded child id:35 kind:None Shape:<rect(127, 410, 483, 212)>
+INFO:root:Loaded child id:36 kind:None Shape:<rect(678, 1067, 526, 43)>
+INFO:root:Loaded child id:37 kind:None Shape:<rect(704, 926, 494, 97)>
+INFO:root:Loaded child id:38 kind:None Shape:<rect(179, 604, 955, 164)>
+INFO:root:Loaded child id:39 kind:None Shape:<rect(211, 633, 517, 343)>
+INFO:root:Loaded child id:40 kind:None Shape:<rect(737, 48, 237, 302)>
+INFO:root:Loaded child id:41 kind:None Shape:<rect(468, 3, 1037, 380)>
+INFO:root:Loaded child id:42 kind:None Shape:<rect(152, 464, 1032, 622)>
+INFO:root:Loaded child id:43 kind:None Shape:<rect(130, 316, 964, 904)>
+INFO:root:Loaded child id:44 kind:None Shape:<rect(59, 805, 190, 825)>
+INFO:root:Loaded child id:45 kind:None Shape:<rect(112, 921, 558, 297)>
+INFO:root:Loaded child id:46 kind:None Shape:<rect(919, 1697, 95, 15)>
+INFO:root:Loaded child id:47 kind:None Shape:<rect(145, 659, 1007, 95)>
+INFO:root:Loaded child id:48 kind:None Shape:<rect(65, 834, 737, 183)>
+INFO:root:Loaded child id:49 kind:None Shape:<rect(92, 725, 807, 446)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 50 nodes to order
+INFO:root:Computing Node relationship 1 of 50
+INFO:root:Computing Node relationship 2 of 50
+INFO:root:Computing Node relationship 3 of 50
+INFO:root:Computing Node relationship 4 of 50
+INFO:root:Computing Node relationship 5 of 50
+INFO:root:Computing Node relationship 6 of 50
+INFO:root:Computing Node relationship 7 of 50
+INFO:root:Computing Node relationship 8 of 50
+INFO:root:Computing Node relationship 9 of 50
+INFO:root:Computing Node relationship 10 of 50
+INFO:root:Computing Node relationship 11 of 50
+INFO:root:Computing Node relationship 12 of 50
+INFO:root:Computing Node relationship 13 of 50
+INFO:root:Computing Node relationship 14 of 50
+INFO:root:Computing Node relationship 15 of 50
+INFO:root:Computing Node relationship 16 of 50
+INFO:root:Computing Node relationship 17 of 50
+INFO:root:Computing Node relationship 18 of 50
+INFO:root:Computing Node relationship 19 of 50
+INFO:root:Computing Node relationship 20 of 50
+INFO:root:Computing Node relationship 21 of 50
+INFO:root:Computing Node relationship 22 of 50
+INFO:root:Computing Node relationship 23 of 50
+INFO:root:Computing Node relationship 24 of 50
+INFO:root:Computing Node relationship 25 of 50
+INFO:root:Computing Node relationship 26 of 50
+INFO:root:Computing Node relationship 27 of 50
+INFO:root:Computing Node relationship 28 of 50
+INFO:root:Computing Node relationship 29 of 50
+INFO:root:Computing Node relationship 30 of 50
+INFO:root:Computing Node relationship 31 of 50
+INFO:root:Computing Node relationship 32 of 50
+INFO:root:Computing Node relationship 33 of 50
+INFO:root:Computing Node relationship 34 of 50
+INFO:root:Computing Node relationship 35 of 50
+INFO:root:Computing Node relationship 36 of 50
+INFO:root:Computing Node relationship 37 of 50
+INFO:root:Computing Node relationship 38 of 50
+INFO:root:Computing Node relationship 39 of 50
+INFO:root:Computing Node relationship 40 of 50
+INFO:root:Computing Node relationship 41 of 50
+INFO:root:Computing Node relationship 42 of 50
+INFO:root:Computing Node relationship 43 of 50
+INFO:root:Computing Node relationship 44 of 50
+INFO:root:Computing Node relationship 45 of 50
+INFO:root:Computing Node relationship 46 of 50
+INFO:root:Computing Node relationship 47 of 50
+INFO:root:Computing Node relationship 48 of 50
+INFO:root:Computing Node relationship 49 of 50
+INFO:root:Computing Node relationship 50 of 50
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 7 with kind uniform
+INFO:root:Getting indices for shape id:7 kind:uniform Shape:<rect(498, 129, 1681, 306)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 498, 500, 129, 435
+INFO:root:Generating texture for shape 8 with kind uniform
+INFO:root:Getting indices for shape id:8 kind:uniform Shape:<rect(8, 295, 788, 102)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 8, 500, 295, 397
+INFO:root:Generating texture for shape 9 with kind uniform
+INFO:root:Getting indices for shape id:9 kind:uniform Shape:<rect(404, 499, 549, 23)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 404, 500, 499, 500
+INFO:root:Generating texture for shape 11 with kind uniform
+INFO:root:Getting indices for shape id:11 kind:uniform Shape:<rect(419, 264, 88, 372)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 419, 500, 264, 500
+INFO:root:Generating texture for shape 13 with kind uniform
+INFO:root:Getting indices for shape id:13 kind:uniform Shape:<rect(261, 130, 504, 87)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 261, 500, 130, 217
+INFO:root:Generating texture for shape 17 with kind uniform
+INFO:root:Getting indices for shape id:17 kind:uniform Shape:<rect(464, 264, 1244, 431)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 464, 500, 264, 500
+INFO:root:Generating texture for shape 19 with kind uniform
+INFO:root:Getting indices for shape id:19 kind:uniform Shape:<rect(233, 336, 1203, 71)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 233, 500, 336, 407
+INFO:root:Generating texture for shape 21 with kind uniform
+INFO:root:Getting indices for shape id:21 kind:uniform Shape:<rect(199, 315, 852, 428)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 199, 500, 315, 500
+INFO:root:Generating texture for shape 22 with kind uniform
+INFO:root:Getting indices for shape id:22 kind:uniform Shape:<rect(83, 295, 1611, 572)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 83, 500, 295, 500
+INFO:root:Generating texture for shape 24 with kind uniform
+INFO:root:Getting indices for shape id:24 kind:uniform Shape:<rect(120, 78, 671, 37)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 120, 500, 78, 115
+INFO:root:Generating texture for shape 29 with kind uniform
+INFO:root:Getting indices for shape id:29 kind:uniform Shape:<rect(121, 188, 1668, 119)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 121, 500, 188, 307
+INFO:root:Generating texture for shape 35 with kind uniform
+INFO:root:Getting indices for shape id:35 kind:uniform Shape:<rect(127, 410, 483, 212)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 127, 500, 410, 500
+INFO:root:Generating texture for shape 41 with kind uniform
+INFO:root:Getting indices for shape id:41 kind:uniform Shape:<rect(468, 3, 1037, 380)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 468, 500, 3, 383
+INFO:root:Generating texture for shape 42 with kind uniform
+INFO:root:Getting indices for shape id:42 kind:uniform Shape:<rect(152, 464, 1032, 622)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 152, 500, 464, 500
+INFO:root:Generating texture for shape 43 with kind uniform
+INFO:root:Getting indices for shape id:43 kind:uniform Shape:<rect(130, 316, 964, 904)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 130, 500, 316, 500
+INFO:root:started execution at 2021-01-10 12:08:15.992055
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(130, 337, 266, 63)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(543, 293, 51, 239)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 74, 180, 170)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(0, 0, 800, 600)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 4 nodes to order
+INFO:root:Computing Node relationship 1 of 4
+INFO:root:Computing Node relationship 2 of 4
+INFO:root:Computing Node relationship 3 of 4
+INFO:root:Computing Node relationship 4 of 4
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(130, 337, 266, 63)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 130, 396, 337, 400
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(81, 74, 180, 170)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 81, 261, 74, 244
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(0, 0, 800, 600)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 0, 500, 0, 500
+INFO:root:started execution at 2021-01-10 12:11:21.703526
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(130, 337, 266, 63)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(543, 293, 51, 239)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 74, 180, 170)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(0, 0, 800, 600)>
+INFO:root:loaded all children
+INFO:root:started execution at 2021-01-10 12:13:00.444463
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(138, 428, 148, 129)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(568, 235, 47, 254)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(392, 164, 51, 147)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(65, 124, 220, 203)>
+INFO:root:Loaded child id:4 kind:None Shape:<rect(0, 0, 800, 600)>
+INFO:root:loaded all children
+INFO:root:started execution at 2021-01-10 12:19:59.583349
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 12:26:35.842860
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 12:28:33.599643
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 12:33:09.683808
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 12:33:17.672514
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 12:34:37.938809
+INFO:root:started execution at 2021-01-10 12:34:43.504056
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 12:36:22.523994
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(130, 337, 266, 63)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(543, 293, 51, 239)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 74, 180, 170)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(130, 337, 266, 63)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 130, 396, 337, 400
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(81, 74, 180, 170)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 81, 261, 74, 244
+INFO:root:started execution at 2021-01-10 12:44:51.527263
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(138, 428, 148, 129)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(568, 235, 47, 254)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(392, 164, 51, 147)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(65, 124, 220, 203)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 4 nodes to order
+INFO:root:Computing Node relationship 1 of 4
+INFO:root:Computing Node relationship 2 of 4
+INFO:root:Computing Node relationship 3 of 4
+INFO:root:Computing Node relationship 4 of 4
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(138, 428, 148, 129)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 138, 286, 428, 500
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(392, 164, 51, 147)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 392, 443, 164, 311
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(65, 124, 220, 203)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 65, 285, 124, 327
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(138, 428, 148, 129)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(568, 235, 47, 254)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(392, 164, 51, 147)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(65, 124, 220, 203)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 4 nodes to order
+INFO:root:Computing Node relationship 1 of 4
+INFO:root:Computing Node relationship 2 of 4
+INFO:root:Computing Node relationship 3 of 4
+INFO:root:Computing Node relationship 4 of 4
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind no_edges
+INFO:root:Getting indices for shape id:0 kind:no_edges Shape:<rect(138, 428, 148, 129)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 138, 286, 428, 500
+INFO:root:Generating texture for shape 2 with kind no_edges
+INFO:root:Getting indices for shape id:2 kind:no_edges Shape:<rect(392, 164, 51, 147)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 392, 443, 164, 311
+INFO:root:Generating texture for shape 3 with kind no_edges
+INFO:root:Getting indices for shape id:3 kind:no_edges Shape:<rect(65, 124, 220, 203)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 65, 285, 124, 327
+INFO:root:started execution at 2021-01-10 12:48:30.290848
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(112, 150, 229, 166)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(152, 42, 102, 79)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 2 nodes to order
+INFO:root:Computing Node relationship 1 of 2
+INFO:root:Computing Node relationship 2 of 2
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(112, 150, 229, 166)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 341, 150, 316
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(152, 42, 102, 79)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 152, 254, 42, 121
+INFO:root:started execution at 2021-01-10 12:55:27.096151
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(0, 0, 800, 800)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(112, 150, 229, 166)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 2 nodes to order
+INFO:root:Computing Node relationship 1 of 2
+INFO:root:Computing Node relationship 2 of 2
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(0, 0, 800, 800)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 0, 500, 0, 500
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(112, 150, 229, 166)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 341, 150, 316
+INFO:root:started execution at 2021-01-10 12:56:16.279566
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 12:57:53.178529
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(0, 0, 800, 800)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(112, 150, 229, 166)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(152, 42, 102, 79)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(0, 0, 800, 800)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 0, 500, 0, 500
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(112, 150, 229, 166)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 341, 150, 316
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(152, 42, 102, 79)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 152, 254, 42, 121
+INFO:root:started execution at 2021-01-10 13:02:01.432116
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:09:07.444771
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:11:54.963172
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(0, 0, 800, 800)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(112, 150, 229, 166)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(152, 42, 102, 79)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(0, 0, 800, 800)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 0, 500, 0, 500
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(112, 150, 229, 166)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 341, 150, 316
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(152, 42, 102, 79)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 152, 254, 42, 121
+INFO:root:started execution at 2021-01-10 13:17:59.595835
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:18:55.779007
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 0 nodes to order
+INFO:root:Created hierarchy!
+INFO:root:started execution at 2021-01-10 13:21:58.669262
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:22:30.658776
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:22:52.699198
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(0, 0, 800, 800)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(112, 150, 229, 166)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(152, 42, 102, 79)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(0, 0, 800, 800)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 0, 500, 0, 500
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(112, 150, 229, 166)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 341, 150, 316
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(152, 42, 102, 79)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 152, 254, 42, 121
+INFO:root:started execution at 2021-01-10 13:24:01.406287
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(208, 118, 1, 1)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(192, 117, 1, 1)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(227, 47, 1, 1)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(153, 42, 4, 3)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 4 nodes to order
+INFO:root:Computing Node relationship 1 of 4
+INFO:root:Computing Node relationship 2 of 4
+INFO:root:Computing Node relationship 3 of 4
+INFO:root:Computing Node relationship 4 of 4
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(208, 118, 1, 1)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 208, 209, 118, 119
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(192, 117, 1, 1)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 192, 193, 117, 118
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(227, 47, 1, 1)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 227, 228, 47, 48
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(153, 42, 4, 3)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 153, 157, 42, 45
+INFO:root:started execution at 2021-01-10 13:24:46.884007
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:26:36.413677
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:28:41.647827
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 0 nodes to order
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 0 nodes to order
+INFO:root:Created hierarchy!
+INFO:root:started execution at 2021-01-10 13:31:29.261351
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 0 nodes to order
+INFO:root:Created hierarchy!
+INFO:root:started execution at 2021-01-10 13:32:32.426149
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(139, 429, 146, 127)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(569, 236, 45, 252)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(393, 165, 49, 145)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(66, 125, 218, 201)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 4 nodes to order
+INFO:root:Computing Node relationship 1 of 4
+INFO:root:Computing Node relationship 2 of 4
+INFO:root:Computing Node relationship 3 of 4
+INFO:root:Computing Node relationship 4 of 4
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(139, 429, 146, 127)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 139, 285, 429, 500
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(393, 165, 49, 145)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 393, 442, 165, 310
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(66, 125, 218, 201)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 66, 284, 125, 326
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 0 nodes to order
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(139, 429, 146, 127)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(569, 236, 45, 252)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(393, 165, 49, 145)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(66, 125, 218, 201)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 4 nodes to order
+INFO:root:Computing Node relationship 1 of 4
+INFO:root:Computing Node relationship 2 of 4
+INFO:root:Computing Node relationship 3 of 4
+INFO:root:Computing Node relationship 4 of 4
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(139, 429, 146, 127)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 139, 285, 429, 500
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(393, 165, 49, 145)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 393, 442, 165, 310
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(66, 125, 218, 201)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 66, 284, 125, 326
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(82, 75, 178, 168)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 1 nodes to order
+INFO:root:Computing Node relationship 1 of 1
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(82, 75, 178, 168)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 82, 260, 75, 243
+INFO:root:started execution at 2021-01-10 13:35:00.527535
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(139, 429, 146, 127)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(569, 236, 45, 252)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(393, 165, 49, 145)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(66, 125, 218, 201)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 4 nodes to order
+INFO:root:Computing Node relationship 1 of 4
+INFO:root:Computing Node relationship 2 of 4
+INFO:root:Computing Node relationship 3 of 4
+INFO:root:Computing Node relationship 4 of 4
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(139, 429, 146, 127)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 139, 285, 429, 500
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(393, 165, 49, 145)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 393, 442, 165, 310
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(66, 125, 218, 201)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 66, 284, 125, 326
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(82, 75, 178, 168)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 1 nodes to order
+INFO:root:Computing Node relationship 1 of 1
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(82, 75, 178, 168)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 82, 260, 75, 243
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 0 nodes to order
+INFO:root:Created hierarchy!
+INFO:root:started execution at 2021-01-10 13:36:05.994714
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:36:37.639599
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:42:30.785145
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:started execution at 2021-01-10 13:44:20.276032
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(112, 150, 228, 165)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(112, 150, 228, 165)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(62, 58, 29, 53)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(62, 58, 29, 53)>
+INFO:root:Loaded child id:4 kind:None Shape:<rect(153, 43, 100, 77)>
+INFO:root:Loaded child id:5 kind:None Shape:<rect(241, 77, 3, 3)>
+INFO:root:Loaded child id:6 kind:None Shape:<rect(93, 20, 35, 22)>
+INFO:root:Loaded child id:7 kind:None Shape:<rect(93, 20, 35, 22)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 8 nodes to order
+INFO:root:Computing Node relationship 1 of 8
+INFO:root:Computing Node relationship 2 of 8
+INFO:root:Computing Node relationship 3 of 8
+INFO:root:Computing Node relationship 4 of 8
+INFO:root:Computing Node relationship 5 of 8
+INFO:root:Computing Node relationship 6 of 8
+INFO:root:Computing Node relationship 7 of 8
+INFO:root:Computing Node relationship 8 of 8
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(112, 150, 228, 165)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 340, 150, 315
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(112, 150, 228, 165)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 340, 150, 315
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(62, 58, 29, 53)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 62, 91, 58, 111
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(62, 58, 29, 53)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 62, 91, 58, 111
+INFO:root:Generating texture for shape 4 with kind uniform
+INFO:root:Getting indices for shape id:4 kind:uniform Shape:<rect(153, 43, 100, 77)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 153, 253, 43, 120
+INFO:root:Generating texture for shape 5 with kind uniform
+INFO:root:Getting indices for shape id:5 kind:uniform Shape:<rect(241, 77, 3, 3)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 241, 244, 77, 80
+INFO:root:Generating texture for shape 6 with kind uniform
+INFO:root:Getting indices for shape id:6 kind:uniform Shape:<rect(93, 20, 35, 22)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 93, 128, 20, 42
+INFO:root:Generating texture for shape 7 with kind uniform
+INFO:root:Getting indices for shape id:7 kind:uniform Shape:<rect(93, 20, 35, 22)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 93, 128, 20, 42
+INFO:root:started execution at 2021-01-10 13:49:03.498578
+INFO:root:Acquired file name
+INFO:root:Loaded action dict
+INFO:root:Loaded child id:0 kind:None Shape:<rect(212, 196, 1, 44)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(214, 195, 125, 45)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(112, 150, 179, 165)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(62, 58, 29, 53)>
+INFO:root:Loaded child id:4 kind:None Shape:<rect(62, 58, 29, 53)>
+INFO:root:Loaded child id:5 kind:None Shape:<rect(153, 43, 100, 77)>
+INFO:root:Loaded child id:6 kind:None Shape:<rect(241, 77, 3, 3)>
+INFO:root:Loaded child id:7 kind:None Shape:<rect(93, 20, 35, 22)>
+INFO:root:Loaded child id:8 kind:None Shape:<rect(93, 20, 35, 22)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 9 nodes to order
+INFO:root:Computing Node relationship 1 of 9
+INFO:root:Computing Node relationship 2 of 9
+INFO:root:Computing Node relationship 3 of 9
+INFO:root:Computing Node relationship 4 of 9
+INFO:root:Computing Node relationship 5 of 9
+INFO:root:Computing Node relationship 6 of 9
+INFO:root:Computing Node relationship 7 of 9
+INFO:root:Computing Node relationship 8 of 9
+INFO:root:Computing Node relationship 9 of 9
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind uniform
+INFO:root:Getting indices for shape id:0 kind:uniform Shape:<rect(212, 196, 1, 44)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 212, 213, 196, 240
+INFO:root:Generating texture for shape 1 with kind uniform
+INFO:root:Getting indices for shape id:1 kind:uniform Shape:<rect(214, 195, 125, 45)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 214, 339, 195, 240
+INFO:root:Generating texture for shape 2 with kind uniform
+INFO:root:Getting indices for shape id:2 kind:uniform Shape:<rect(112, 150, 179, 165)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 112, 291, 150, 315
+INFO:root:Generating texture for shape 3 with kind uniform
+INFO:root:Getting indices for shape id:3 kind:uniform Shape:<rect(62, 58, 29, 53)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 62, 91, 58, 111
+INFO:root:Generating texture for shape 4 with kind uniform
+INFO:root:Getting indices for shape id:4 kind:uniform Shape:<rect(62, 58, 29, 53)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 62, 91, 58, 111
+INFO:root:Generating texture for shape 5 with kind uniform
+INFO:root:Getting indices for shape id:5 kind:uniform Shape:<rect(153, 43, 100, 77)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 153, 253, 43, 120
+INFO:root:Generating texture for shape 6 with kind uniform
+INFO:root:Getting indices for shape id:6 kind:uniform Shape:<rect(241, 77, 3, 3)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 241, 244, 77, 80
+INFO:root:Generating texture for shape 7 with kind uniform
+INFO:root:Getting indices for shape id:7 kind:uniform Shape:<rect(93, 20, 35, 22)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 93, 128, 20, 42
+INFO:root:Generating texture for shape 8 with kind uniform
+INFO:root:Getting indices for shape id:8 kind:uniform Shape:<rect(93, 20, 35, 22)> and viewing window <rect(0, 0, 500, 500)>
+INFO:root:Indices are 93, 128, 20, 42

@@ -39,9 +39,9 @@ class Interface:
         self.gridspec = gridspec.GridSpec(5,2, height_ratios=[0.1, 0.1, 0.1, 0.1,0.9], width_ratios=[0.9,0.1])
 
         self.img_ax = self.fig.add_subplot(self.gridspec[:,0])
-        self.paint_button_ax = self.fig.add_subplot(self.gridspec[0,1])
-        self.img_load_button_ax = self.fig.add_subplot(self.gridspec[1, 1])
-        self.theme_load_button_ax = self.fig.add_subplot(self.gridspec[2, 1])
+        self.paint_button_ax = self.fig.add_subplot(self.gridspec[2,1])
+        self.img_load_button_ax = self.fig.add_subplot(self.gridspec[0, 1])
+        self.theme_load_button_ax = self.fig.add_subplot(self.gridspec[1, 1])
         self.save_button_ax = self.fig.add_subplot(self.gridspec[3,1])
         self.radio_button_ax = self.fig.add_subplot(self.gridspec[4,1])
 
@@ -60,7 +60,7 @@ class Interface:
         self.imgLoadButton.on_clicked(img_load)
 
         def theme_load(*args):
-            self.theme, self.action_dict = self.load_theme()
+            self.action_dict = self.load_theme()
         self.themeLoadButton.on_clicked(theme_load)
 
         def paint(*args):
@@ -72,8 +72,14 @@ class Interface:
             if self.img is not None:
                 imsave("yee.png", self.img)
                 print("saved")
-        self.saveButton.on_clicked(save)
 
+        def on_radio_select(*args):
+            if self.radio_buttons.value_selected == 0:
+                self.theme = UniformTheme()
+            else:
+                self.theme = NeighborTheme()
+        self.radio_buttons.on_clicked(on_radio_select)
+        self.saveButton.on_clicked(save)
 
     def run(self):
         logging.basicConfig(filename='log.log', level=logging.INFO)
@@ -107,28 +113,23 @@ class Interface:
         Loads the theme and action dict
         :return:
         """
-        theme, js = self.get_theme()
+        file_name = self.get_filename([("json theme", "*.json"), ("All files", "*.*")], "Select theme")
+        with open(file_name) as file:
+            js = json.load(file)
         action_dict = {key: SurfaceInfoNoContext.from_json(js[key]) for key in js.keys()}
-        return theme, action_dict
+        return action_dict
 
     def paint(self):
+        """
+        Paint it, black
+        :return:
+        """
         interpreter = Interpreter()
         interpreter.determine_kind(self.hierarchy, self.shapes, self.theme)
         painter = Painter()
         viewing_window = pygame.Rect(0, 0, 500, 500)
         return painter.paint(self.hierarchy, self.shapes, viewing_window, self.action_dict)
 
-    def get_theme(self):
-        file_name = self.get_filename([("json theme", "*.json"), ("All files", "*.*")], "Select theme")
-        if self.radio_buttons.value_selected == self.radio_labels[0]:
-            with open(file_name) as file:
-                js = json.load(file)
-            return UniformTheme(), js
-        elif self.radio_buttons.value_selected == self.radio_labels[1]:
-            with open(file_name) as file:
-                js = json.load(file)
-            return NeighborTheme(), js
-        else:
-            raise Exception("Radio value that doesn't exist!")
+
 
 

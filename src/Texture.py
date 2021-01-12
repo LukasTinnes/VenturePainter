@@ -62,19 +62,21 @@ class Texture:
         return img
 
     @staticmethod
-    def simplexNoise(dimensions, scale_x=1, scale_y=1):
+    def simplexNoise(dimensions, scale_x=1, scale_y=1, salt=None, pepper=None):
         """
         Makes a salt and pepper texture using multiple colors with the same proability
         :param dimensions: The Textures dimensions
         :param condiments: The colors to choose from
         """
+        salt = np.array([0, 0, 0]) if salt is None else np.array(salt)
+        pepper = np.array([1, 1, 1]) if pepper is None else np.array(pepper)
 
         img = np.empty((dimensions[0], dimensions[1], 3))
 
         for x in range(dimensions[0]):
             for y in range(dimensions[1]):
                 color = (SimplexNoise().noise2(x/scale_x, y/scale_y)+1)/2
-                img[x, y] = np.array([color]*3)
+                img[x, y] = np.array(salt*color+pepper*(1-color))
         return img
 
     @staticmethod
@@ -127,12 +129,14 @@ class Texture:
         return img
 
     @staticmethod
-    def sine_perlin(dimensions, perlin_scale=1, sine_scale=1, randomness=0):
+    def sine_perlin(dimensions, perlin_scale=1, sine_scale=1, randomness=0, salt=None, pepper=None):
         """
         Makes a salt and pepper texture using multiple colors with the same proability
         :param dimensions: The Textures dimensions
         :param condiments: The colors to choose from
         """
+        salt = np.array([0, 0, 0]) if salt is None else np.array(salt)
+        pepper = np.array([1, 1, 1]) if pepper is None else np.array(pepper)
 
         img = np.empty((dimensions[0], dimensions[1], 3))
 
@@ -140,7 +144,7 @@ class Texture:
             for y in range(dimensions[1]):
                 perlin = (SimplexNoise().noise2(x / perlin_scale, y / perlin_scale) + 1)*randomness
                 sine = (math.sin(x*sine_scale+perlin)+1)/2
-                img[x, y] = np.array([sine]*3)
+                img[x, y] = np.array(salt*sine+pepper*(1-sine))
         return img
 
     def tiles(self, dimensions):

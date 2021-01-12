@@ -1,0 +1,6 @@
+{
+  "uniform":      {"kind":"NoContext", "name":"simplexNoise", "args":{"salt":[1,1,0]}},
+  "no_edges":     {"kind":"NoContext", "name":"flat",         "args":{"color":[0.5,0.5,0.5]}},
+  "mutual":       {"kind":"NoContext", "name":"simplexNoise", "args":{"salt":[1,1,0]}},
+  "one_direction":{"kind":"NoContext", "name":"sine_perlin",  "args":{"salt":[0.5,0.5,1], "pepper":[0,0,0.5], "randomness":10, "perlin_scale":1}}
+}

@@ -3,6 +3,7 @@ import random
 import numpy as np
 import math
 from noise.perlin import SimplexNoise
+from numba import jit
 
 
 class Texture:
@@ -11,6 +12,7 @@ class Texture:
         self.image = image
 
     @staticmethod
+    @jit()
     def flat(dimensions, color=None):
         if color is None:
             color = np.array([1, 1, 1])
@@ -22,6 +24,7 @@ class Texture:
         return img
 
     @staticmethod
+    @jit()
     def saltAndPepper(dimensions, salt=None, pepper=None, p=0.5):
         """
         Makes a salt and pepper texture using the provided colors.

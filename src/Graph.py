@@ -10,3 +10,7 @@ class Graph:
 
     def get_node(self, identifier) -> Node:
         return self.nodes[identifier]
+
+    def get_levels(self):
+        for node in self.nodes:
+            pass

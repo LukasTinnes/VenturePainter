@@ -12,6 +12,7 @@ from src.Painter import Painter
 from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
 from src.Themes.UniformTheme import UniformTheme
 from src.Themes.NeighborTheme import NeighborTheme
+from src.Themes.SizeTheme import SizeTheme
 import matplotlib
 from matplotlib.image import imsave
 matplotlib.use("TkAgg")
@@ -28,13 +29,13 @@ class Interface:
     def __init__(self):
         # Data
         self.img = None
-        self.theme = None
+        self.theme = UniformTheme()
         self.shapes = None
         self.hierarchy = None
         self.action_dict = None
 
         # GUI Elements
-        self.radio_labels = ["Uniform", "Neighbor"]
+        self.radio_labels = ["Uniform", "Neighbor", "Size"]
         self.fig = plt.figure()
         self.gridspec = gridspec.GridSpec(5,2, height_ratios=[0.1, 0.1, 0.1, 0.1,0.9], width_ratios=[0.9,0.1])
 
@@ -76,8 +77,10 @@ class Interface:
         def on_radio_select(*args):
             if self.radio_buttons.value_selected == 0:
                 self.theme = UniformTheme()
-            else:
+            elif self.radio_buttons.value_selected == 1:
                 self.theme = NeighborTheme()
+            else:
+                self.theme = SizeTheme()
         self.radio_buttons.on_clicked(on_radio_select)
         self.saveButton.on_clicked(save)
 

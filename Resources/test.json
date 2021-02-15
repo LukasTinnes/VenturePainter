@@ -2,5 +2,8 @@
   "uniform":      {"kind":"NoContext", "name":"simplexNoise", "args":{}},
   "no_edges":     {"kind":"NoContext", "name":"flat", "args":{"color":[1,0,0]}},
   "mutual":       {"kind":"NoContext", "name":"flat", "args":{"color":[0,1,0]}},
-  "one_direction":{"kind":"NoContext", "name":"flat", "args":{"color":[0,0,1]}}
+  "one_direction":{"kind":"NoContext", "name":"flat", "args":{"color":[0,0,1]}},
+  "top":          {"kind":"NoContext", "name":"flat", "args":{"color":[1,0,0]}},
+  "mid":          {"kind":"NoContext", "name":"flat", "args":{"color":[0,1,0]}},
+  "low":          {"kind":"NoContext", "name":"flat", "args":{"color":[0,0,1]}}
 }

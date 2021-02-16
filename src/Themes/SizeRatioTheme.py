@@ -2,7 +2,7 @@ from .Theme import Theme
 from src.Graph import Graph
 
 
-class SizeTheme(Theme):
+class SizeRatioTheme(Theme):
 
     def __init__(self):
         super().__init__()
@@ -15,15 +15,12 @@ class SizeTheme(Theme):
         for shape in shapes:
             size = shape.shape.width * shape.shape.height
             node_sizes.append((shape.id, size))
-        self.node_sizes = sorted(node_sizes, key=lambda tup: tup[0])
+        self.node_sizes = sorted(node_sizes, key=lambda tup: tup[1])
+        print(self.node_sizes)
         self.min = self.node_sizes[-1][1]
         self.max = self.node_sizes[0][1]
 
     def determine_kind(self, graph: Graph, shapes, shape):
-        size = shape.shape.width * shape.shape.height
-        if size / self.max > 2/3:
-            return "size_low"
-        elif size / self.max > 1/3:
-            return "size_mid"
-        else:
-            return "size_top"
+        ratio = (shape.shape.width * shape.shape.height - self.min) / (self.max - self.min)
+        shape.context = {'ratio': ratio}
+        return "size_ratio"

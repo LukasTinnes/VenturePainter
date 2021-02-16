@@ -10,9 +10,11 @@ from src.Intrepreter import Interpreter
 from src.Loader import Loader
 from src.Painter import Painter
 from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
+from src.SurfaceInfos.SurfaceInfoContext import SurfaceInfoContext
 from src.Themes.UniformTheme import UniformTheme
 from src.Themes.NeighborTheme import NeighborTheme
 from src.Themes.SizeTheme import SizeTheme
+from src.Themes.SizeRatioTheme import SizeRatioTheme
 import matplotlib
 from matplotlib.image import imsave
 matplotlib.use("TkAgg")
@@ -35,7 +37,7 @@ class Interface:
         self.action_dict = None
 
         # GUI Elements
-        self.radio_labels = ["Uniform", "Neighbor", "Size"]
+        self.radio_labels = ["Uniform", "Neighbor", "Size", "SizeRatio"]
         self.fig = plt.figure()
         self.gridspec = gridspec.GridSpec(5,2, height_ratios=[0.1, 0.1, 0.1, 0.1,0.9], width_ratios=[0.9,0.1])
 
@@ -79,8 +81,10 @@ class Interface:
                 self.theme = UniformTheme()
             elif self.radio_buttons.value_selected == 1:
                 self.theme = NeighborTheme()
-            else:
+            elif self.radio_buttons.value_selected == 2:
                 self.theme = SizeTheme()
+            else:
+                self.theme = SizeRatioTheme()
         self.radio_buttons.on_clicked(on_radio_select)
         self.saveButton.on_clicked(save)
 
@@ -119,7 +123,13 @@ class Interface:
         file_name = self.get_filename([("json theme", "*.json"), ("All files", "*.*")], "Select theme")
         with open(file_name) as file:
             js = json.load(file)
-        action_dict = {key: SurfaceInfoNoContext.from_json(js[key]) for key in js.keys()}
+        action_dict = {}
+        for key in js.keys():
+            surfaceInfo = js[key]
+            if surfaceInfo["kind"] == "NoContext":
+                action_dict[key] = SurfaceInfoNoContext.from_json(js[key])
+            elif surfaceInfo["kind"] == "Context":
+                action_dict[key] = SurfaceInfoContext.from_json(js[key])
         return action_dict
 
     def paint(self):

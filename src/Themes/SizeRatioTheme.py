@@ -22,5 +22,5 @@ class SizeRatioTheme(Theme):
 
     def determine_kind(self, graph: Graph, shapes, shape):
         ratio = (shape.shape.width * shape.shape.height - self.min) / (self.max - self.min)
-        shape.context = {'ratio': ratio}
+        shape.context = {'size_ratio': ratio}
         return "size_ratio"

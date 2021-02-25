@@ -15,7 +15,6 @@ TODO
 2. Texture lib erweitern 
     - texturen synthetisieren
     - Bild erweitern
-3. Simple arithmeitk für contexts
 4. Interface Overhaul
 5. Sinnvolles log
 6. executable

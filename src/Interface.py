@@ -14,6 +14,7 @@ from matplotlib.image import imsave
 from src.Intrepreter import Interpreter
 from src.Loader import Loader
 from src.Painter import Painter
+from src.SurfaceInfos.SurfaceInfoArithContext import SurfaceInfoArithContext
 from src.SurfaceInfos.SurfaceInfoContext import SurfaceInfoContext
 from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
 from src.Themes.NeighborTheme import NeighborTheme
@@ -146,6 +147,8 @@ class Interface:
                 action_dict[key] = SurfaceInfoNoContext.from_json(js[key])
             elif surfaceInfo["kind"] == "Context":
                 action_dict[key] = SurfaceInfoContext.from_json(js[key])
+            elif surfaceInfo["kind"] == "ArithContext":
+                action_dict[key] = SurfaceInfoArithContext.from_json(js[key])
         return action_dict
 
     def paint(self):

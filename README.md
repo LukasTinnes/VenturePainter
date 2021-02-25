@@ -9,6 +9,14 @@ Pipeline
     - Creates a hierarchy of the resulting shapes
 - Painter
     - Paints the image from the hierarchy
+    
+TODO
+1. Dimensions Window
+2. Texture lib erweitern 
+    - texturen synthetisieren
+    - Bild erweitern
+3. Simple arithmeitk für contexts
+4. Interface Overhaul
    
    
 

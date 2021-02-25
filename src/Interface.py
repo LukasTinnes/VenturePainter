@@ -5,7 +5,6 @@ import os
 from tkinter import *
 from tkinter import filedialog
 
-import cairosvg
 import cv2
 import matplotlib
 import pygame
@@ -69,7 +68,7 @@ class Interface:
             path, extension = os.path.splitext(filename)
             # Some day I am going to add svg shit
             if not extension == ".svg":
-                im = cairosvg.svg2png(filename)
+                im = cv2.imread(filename)
                 self.img_ax.imshow(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
 
         self.imgLoadButton.on_clicked(img_load)

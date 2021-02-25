@@ -1,23 +1,27 @@
 import datetime
+import json
 import logging
 import os
 from tkinter import *
 from tkinter import filedialog
 
+import cairosvg
+import cv2
+import matplotlib
 import pygame
-import json
+from matplotlib.image import imsave
+
 from src.Intrepreter import Interpreter
 from src.Loader import Loader
 from src.Painter import Painter
-from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
 from src.SurfaceInfos.SurfaceInfoContext import SurfaceInfoContext
-from src.Themes.UniformTheme import UniformTheme
+from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
 from src.Themes.NeighborTheme import NeighborTheme
-from src.Themes.SizeTheme import SizeTheme
 from src.Themes.SizeRatioTheme import SizeRatioTheme
+from src.Themes.SizeTheme import SizeTheme
 from src.Themes.TransformationTheme import TransformationTheme
-import matplotlib
-from matplotlib.image import imsave
+from src.Themes.UniformTheme import UniformTheme
+
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 from matplotlib.widgets import Button, RadioButtons
@@ -40,14 +44,14 @@ class Interface:
         # GUI Elements
         self.radio_labels = ["Uniform", "Neighbor", "Size", "SizeRatio", "Transformation"]
         self.fig = plt.figure()
-        self.gridspec = gridspec.GridSpec(5,2, height_ratios=[0.1, 0.1, 0.1, 0.1,0.9], width_ratios=[0.9,0.1])
+        self.gridspec = gridspec.GridSpec(5, 2, height_ratios=[0.1, 0.1, 0.1, 0.1, 0.9], width_ratios=[0.9, 0.1])
 
-        self.img_ax = self.fig.add_subplot(self.gridspec[:,0])
-        self.paint_button_ax = self.fig.add_subplot(self.gridspec[2,1])
+        self.img_ax = self.fig.add_subplot(self.gridspec[:, 0])
+        self.paint_button_ax = self.fig.add_subplot(self.gridspec[2, 1])
         self.img_load_button_ax = self.fig.add_subplot(self.gridspec[0, 1])
         self.theme_load_button_ax = self.fig.add_subplot(self.gridspec[1, 1])
-        self.save_button_ax = self.fig.add_subplot(self.gridspec[3,1])
-        self.radio_button_ax = self.fig.add_subplot(self.gridspec[4,1])
+        self.save_button_ax = self.fig.add_subplot(self.gridspec[3, 1])
+        self.radio_button_ax = self.fig.add_subplot(self.gridspec[4, 1])
 
         self.radio_buttons = RadioButtons(self.radio_button_ax, self.radio_labels)
         self.imgLoadButton = Button(self.img_load_button_ax, "Load Image")
@@ -57,19 +61,27 @@ class Interface:
 
         def img_load(*args):
             filename = self.get_filename([("SVG-Image", "*.svg"), ("png image", "*.png"),
-                                           ("jpg image", "*.jpg *.jpeg"),
-                                           ("tagged image file", "*.tiff *.tif"),
-                                           ("All files", "*.*")], "Select image")
+                                          ("jpg image", "*.jpg *.jpeg"),
+                                          ("tagged image file", "*.tiff *.tif"),
+                                          ("All files", "*.*")], "Select image")
             self.shapes, self.hierarchy = self.load_img(filename)
+            path, extension = os.path.splitext(filename)
+            # Some day I am going to add svg shit
+            if not extension == ".svg":
+                im = cairosvg.svg2png(filename)
+                self.img_ax.imshow(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
+
         self.imgLoadButton.on_clicked(img_load)
 
         def theme_load(*args):
             self.action_dict = self.load_theme()
+
         self.themeLoadButton.on_clicked(theme_load)
 
         def paint(*args):
             self.img = self.paint()
             self.img_ax.imshow(self.img)
+
         self.paintButton.on_clicked(paint)
 
         def save(*args):
@@ -146,7 +158,3 @@ class Interface:
         painter = Painter()
         viewing_window = pygame.Rect(0, 0, 1000, 1000)
         return painter.paint(self.hierarchy, self.shapes, viewing_window, self.action_dict)
-
-
-
-

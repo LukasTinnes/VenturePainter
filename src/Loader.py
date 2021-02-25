@@ -20,12 +20,12 @@ class Loader:
         """
         self.id_count = 0
 
-    def load(self, filename:str) -> List[Shape]:
+    def load(self, filename: str) -> List[Shape]:
         """
         Loads every child node of the root of a specific svg images' xml tree representation
         :param filename: filename of the svg image (in the resource folder)
         """
-        #TODO fileending descrimination
+        # TODO fileending descrimination
         path, extension = os.path.splitext(filename)
         if extension == ".svg":
             return self._load_svg(filename)
@@ -34,7 +34,7 @@ class Loader:
         else:
             raise Exception(f"Unknown file ending {extension}")
 
-    def _load_svg(self, filename:str) -> List[Shape]:
+    def _load_svg(self, filename: str) -> List[Shape]:
         """
         Loads Objects from SVG file
         :param filename:

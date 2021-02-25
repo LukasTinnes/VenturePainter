@@ -20,6 +20,7 @@ TODO
 6. executable
 7. Rectangle recognition
 8. Themes
+    - Concatenate Textures
    
    
 

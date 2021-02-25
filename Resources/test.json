@@ -1,6 +1,12 @@
 {
-  "uniform":      {"kind":"NoContext", "name":"simplexNoise", "args":{}},
-  "no_edges":     {"kind":"NoContext", "name":"flat", "args":{"color":[1,0,0]}},
-  "mutual":       {"kind":"NoContext", "name":"flat", "args":{"color":[0,1,0]}},
-  "one_direction":{"kind":"NoContext", "name":"flat", "args":{"color":[0,0,1]}}
+  "uniform":        {"kind":"NoContext", "name":"simplexNoise", "args":{}},
+  "no_edges":       {"kind":"NoContext", "name":"flat", "args":{"color":[1,0,0]}},
+  "mutual":         {"kind":"NoContext", "name":"flat", "args":{"color":[0,1,0]}},
+  "one_direction":  {"kind":"NoContext", "name":"flat", "args":{"color":[0,0,1]}},
+  "top":            {"kind":"NoContext", "name":"flat", "args":{"color":[1,0,0]}},
+  "mid":            {"kind":"NoContext", "name":"flat", "args":{"color":[0,1,0]}},
+  "low":            {"kind":"NoContext", "name":"flat", "args":{"color":[0,0,1]}},
+  "size_ratio":     {"kind":"Context", "name":"sine_perlin",  "args":{"salt":[0.5,0.5,"$size_ratio"], "pepper":[0,0,0.5], "randomness":10, "perlin_scale":1}},
+  "transformation": {"kind":"Context", "name":"sine_perlin",  "args":{"salt":["$size_ratio","$x_ratio","$squareness"], "pepper":[0,0,0.5], "randomness":10, "perlin_scale":1}}
+
 }

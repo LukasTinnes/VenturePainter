@@ -50,6 +50,7 @@ class Interpreter:
         return graph
 
     def determine_kind(self, graph, shapes, theme):
+        theme.prepare(graph, shapes)
         for shape in shapes:
             shape.kind = theme.determine_kind(graph, shapes, shape)
 

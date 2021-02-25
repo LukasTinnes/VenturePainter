@@ -34,8 +34,6 @@ class Loader:
         else:
             raise Exception(f"Unknown file ending {extension}")
 
-    im = cv2.imread('test_black.png')
-
     def _load_svg(self, filename:str) -> List[Shape]:
         """
         Loads Objects from SVG file

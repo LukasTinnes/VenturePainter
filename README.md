@@ -17,6 +17,10 @@ TODO
     - Bild erweitern
 3. Simple arithmeitk für contexts
 4. Interface Overhaul
+5. Sinnvolles log
+6. executable
+7. Rectangle recognition
+8. Themes
    
    
 

@@ -11,6 +11,7 @@ from src.Loader import Loader
 from src.Painter import Painter
 from src.SurfaceInfos.SurfaceInfoNoContext import SurfaceInfoNoContext
 from src.SurfaceInfos.SurfaceInfoContext import SurfaceInfoContext
+from src.SurfaceInfos.SurfaceInfoArithContext import SurfaceInfoArithContext
 from src.Themes.UniformTheme import UniformTheme
 from src.Themes.NeighborTheme import NeighborTheme
 from src.Themes.SizeTheme import SizeTheme
@@ -134,6 +135,8 @@ class Interface:
                 action_dict[key] = SurfaceInfoNoContext.from_json(js[key])
             elif surfaceInfo["kind"] == "Context":
                 action_dict[key] = SurfaceInfoContext.from_json(js[key])
+            elif surfaceInfo["kind"] == "ArithContext":
+                action_dict[key] = SurfaceInfoArithContext.from_json(js[key])
         return action_dict
 
     def paint(self):

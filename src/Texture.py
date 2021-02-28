@@ -199,3 +199,28 @@ class Texture:
                                     y_sign] / 255
 
         return img
+
+    @staticmethod
+    def random_block_quilting(dimensions, filename, block_size=None):
+        ref_img = cv2.imread(filename)
+        ref_img = cv2.cvtColor(ref_img, cv2.COLOR_BGR2RGB)
+
+        if block_size is None:
+            block_size = min(ref_img.shape)/10
+
+        img = np.empty((dimensions[0], dimensions[1], 3))
+        print("Shape", img.shape)
+        print("Ref Shape", ref_img.shape)
+        for x_block in range(int(ref_img.shape[0] / block_size)):
+            for y_block in range(int(ref_img.shape[1] / block_size)):
+                random_x = random.randint(0, ref_img.shape[0] - block_size)
+                random_y = random.randint(0, ref_img.shape[1] - block_size)
+                for x in range(block_size):
+                    for y in range(block_size):
+                        print(img.shape)
+                        if x+x_block*block_size < img.shape[0] and y+y_block*block_size < img.shape[1]:
+
+                            img[x+x_block*block_size, y+y_block*block_size,:] = ref_img[random_x + x, random_y + y,:] / 255
+
+
+        return img

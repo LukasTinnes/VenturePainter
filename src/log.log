@@ -1,1 +1,598 @@
 INFO:root:started execution at 2021-01-11 13:04:50.840095
+INFO:root:started execution at 2021-02-28 13:26:11.757378
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 13:26:56.015910
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 13:27:26.580658
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:started execution at 2021-02-28 13:28:10.402164
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:started execution at 2021-02-28 13:28:33.255472
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 13:30:02.344567
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 13:32:04.598560
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 13:54:29.271471
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 13:56:15.584551
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 13:56:39.074895
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 13:58:56.676765
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:00:52.888412
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 14:01:31.228605
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 14:02:12.825984
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 14:02:59.861675
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 14:03:21.365905
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:04:54.100209
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:started execution at 2021-02-28 14:05:22.649842
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:08:33.546760
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:09:19.187371
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:11:02.594285
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:13:33.071892
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:15:23.579213
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:16:22.896606
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:17:36.707827
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:18:31.591967
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:19:06.847983
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:20:42.120432
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-02-28 14:21:28.675095
+INFO:root:Acquired file name
+INFO:root:Detected 3 children. Loading
+INFO:root:Loaded child id:0 kind:None Shape:<rect(51, 50, 137, 170)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(67, 129, 43, 58)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(81, 68, 137, 25)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 3 nodes to order
+INFO:root:Computing Node relationship 1 of 3
+INFO:root:Computing Node relationship 2 of 3
+INFO:root:Computing Node relationship 3 of 3
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(51, 50, 137, 170)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 51, 188, 50, 220
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(67, 129, 43, 58)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 67, 110, 129, 187
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(81, 68, 137, 25)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 81, 218, 68, 93

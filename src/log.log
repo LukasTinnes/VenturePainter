@@ -8387,3 +8387,97 @@ INFO:root:Indices are 65, 284, 124, 326
 INFO:root:Generating texture for shape 7 with kind transformation
 INFO:root:Getting indices for shape id:7 kind:transformation Shape:<rect(65, 124, 219, 202)> and viewing window <rect(0, 0, 1000, 1000)>
 INFO:root:Indices are 65, 284, 124, 326
+INFO:root:started execution at 2021-03-02 23:41:33.197004
+INFO:root:started execution at 2021-03-02 23:41:59.666518
+INFO:root:Acquired file name
+INFO:root:Loaded child id:0 kind:None Shape:<rect(138, 428, 147, 128)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(138, 428, 147, 128)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(568, 235, 46, 253)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(568, 235, 46, 253)>
+INFO:root:Loaded child id:4 kind:None Shape:<rect(392, 164, 50, 146)>
+INFO:root:Loaded child id:5 kind:None Shape:<rect(392, 164, 50, 146)>
+INFO:root:Loaded child id:6 kind:None Shape:<rect(65, 124, 219, 202)>
+INFO:root:Loaded child id:7 kind:None Shape:<rect(65, 124, 219, 202)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 8 nodes to order
+INFO:root:Computing Node relationship 1 of 8
+INFO:root:Computing Node relationship 2 of 8
+INFO:root:Computing Node relationship 3 of 8
+INFO:root:Computing Node relationship 4 of 8
+INFO:root:Computing Node relationship 5 of 8
+INFO:root:Computing Node relationship 6 of 8
+INFO:root:Computing Node relationship 7 of 8
+INFO:root:Computing Node relationship 8 of 8
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(138, 428, 147, 128)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 138, 285, 428, 556
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(138, 428, 147, 128)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 138, 285, 428, 556
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(568, 235, 46, 253)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 568, 614, 235, 488
+INFO:root:Generating texture for shape 3 with kind transformation
+INFO:root:Getting indices for shape id:3 kind:transformation Shape:<rect(568, 235, 46, 253)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 568, 614, 235, 488
+INFO:root:Generating texture for shape 4 with kind transformation
+INFO:root:Getting indices for shape id:4 kind:transformation Shape:<rect(392, 164, 50, 146)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 392, 442, 164, 310
+INFO:root:Generating texture for shape 5 with kind transformation
+INFO:root:Getting indices for shape id:5 kind:transformation Shape:<rect(392, 164, 50, 146)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 392, 442, 164, 310
+INFO:root:Generating texture for shape 6 with kind transformation
+INFO:root:Getting indices for shape id:6 kind:transformation Shape:<rect(65, 124, 219, 202)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 65, 284, 124, 326
+INFO:root:Generating texture for shape 7 with kind transformation
+INFO:root:Getting indices for shape id:7 kind:transformation Shape:<rect(65, 124, 219, 202)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 65, 284, 124, 326
+WARNING:matplotlib.image:Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+INFO:root:started execution at 2021-03-02 23:42:29.184207
+INFO:root:Acquired file name
+INFO:root:Loaded child id:0 kind:None Shape:<rect(138, 428, 147, 128)>
+INFO:root:Loaded child id:1 kind:None Shape:<rect(138, 428, 147, 128)>
+INFO:root:Loaded child id:2 kind:None Shape:<rect(568, 235, 46, 253)>
+INFO:root:Loaded child id:3 kind:None Shape:<rect(568, 235, 46, 253)>
+INFO:root:Loaded child id:4 kind:None Shape:<rect(392, 164, 50, 146)>
+INFO:root:Loaded child id:5 kind:None Shape:<rect(392, 164, 50, 146)>
+INFO:root:Loaded child id:6 kind:None Shape:<rect(65, 124, 219, 202)>
+INFO:root:Loaded child id:7 kind:None Shape:<rect(65, 124, 219, 202)>
+INFO:root:loaded all children
+INFO:root:Creating hierarchy. There are 8 nodes to order
+INFO:root:Computing Node relationship 1 of 8
+INFO:root:Computing Node relationship 2 of 8
+INFO:root:Computing Node relationship 3 of 8
+INFO:root:Computing Node relationship 4 of 8
+INFO:root:Computing Node relationship 5 of 8
+INFO:root:Computing Node relationship 6 of 8
+INFO:root:Computing Node relationship 7 of 8
+INFO:root:Computing Node relationship 8 of 8
+INFO:root:Created hierarchy!
+INFO:root:Acquired file name
+INFO:root:Generating texture for shape 0 with kind transformation
+INFO:root:Getting indices for shape id:0 kind:transformation Shape:<rect(138, 428, 147, 128)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 138, 285, 428, 556
+INFO:root:Generating texture for shape 1 with kind transformation
+INFO:root:Getting indices for shape id:1 kind:transformation Shape:<rect(138, 428, 147, 128)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 138, 285, 428, 556
+INFO:root:Generating texture for shape 2 with kind transformation
+INFO:root:Getting indices for shape id:2 kind:transformation Shape:<rect(568, 235, 46, 253)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 568, 614, 235, 488
+INFO:root:Generating texture for shape 3 with kind transformation
+INFO:root:Getting indices for shape id:3 kind:transformation Shape:<rect(568, 235, 46, 253)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 568, 614, 235, 488
+INFO:root:Generating texture for shape 4 with kind transformation
+INFO:root:Getting indices for shape id:4 kind:transformation Shape:<rect(392, 164, 50, 146)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 392, 442, 164, 310
+INFO:root:Generating texture for shape 5 with kind transformation
+INFO:root:Getting indices for shape id:5 kind:transformation Shape:<rect(392, 164, 50, 146)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 392, 442, 164, 310
+INFO:root:Generating texture for shape 6 with kind transformation
+INFO:root:Getting indices for shape id:6 kind:transformation Shape:<rect(65, 124, 219, 202)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 65, 284, 124, 326
+INFO:root:Generating texture for shape 7 with kind transformation
+INFO:root:Getting indices for shape id:7 kind:transformation Shape:<rect(65, 124, 219, 202)> and viewing window <rect(0, 0, 1000, 1000)>
+INFO:root:Indices are 65, 284, 124, 326

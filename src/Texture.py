@@ -154,7 +154,7 @@ class Texture:
     @staticmethod
     def checkerboard(dimensions, salt=None, pepper=None, size=1):
         """
-        Makes a salt and pepper texture using multiple colors with the same proability
+        Creates a standarc checkerboard pattern of size size and checks og color salt and pepper.
         :param dimensions: The Textures dimensions
         :param condiments: The colors to choose from
         """
@@ -267,5 +267,20 @@ class Texture:
                         if x + x_block * block_size < img.shape[0] and y + y_block * block_size < img.shape[1]:
                             img[x + x_block * block_size, y + y_block * block_size, :] = \
                                 ref_img[minimal_block[0] + x, minimal_block[1] + y, :] / 255
+
+        return img
+
+    @staticmethod
+    def strech_img(dimensions, filename):
+        ref_img = cv2.imread(filename)
+        ref_img = cv2.cvtColor(ref_img, cv2.COLOR_BGR2RGB) / 255
+
+        img = np.zeros((dimensions[0], dimensions[1], 3))
+        for x in range(dimensions[0]):
+            for y in range(dimensions[1]):
+                ref_x = int(x / img.shape[0] * ref_img.shape[0])
+                ref_y = int(y / img.shape[1] * ref_img.shape[1])
+
+                img[x,y] = ref_img[ref_x, ref_y]
 
         return img

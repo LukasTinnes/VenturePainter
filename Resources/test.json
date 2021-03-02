@@ -7,6 +7,6 @@
   "mid":            {"kind":"NoContext", "name":"flat", "args":{"color":[0,1,0]}},
   "low":            {"kind":"NoContext", "name":"flat", "args":{"color":[0,0,1]}},
   "size_ratio":     {"kind":"Context", "name":"sine_perlin",  "args":{"salt":[0.5,0.5,"$size_ratio"], "pepper":[0,0,0.5], "randomness":10, "perlin_scale":1}},
-  "transformation": {"kind":"ArithContext", "name":"random_block_quilting",  "args":{"filename":"'C:/Users/Tobias/PycharmProjects/VenturePainter/Resources/marble.png'", "block_size":"30"}}
+  "transformation": {"kind":"ArithContext", "name":"neighbor_block_quilting",  "args":{"filename":"'C:/Users/Tobias/PycharmProjects/VenturePainter/Resources/Tex_Error.PNG'", "block_size":"50", "iterations":"40", "border_size":"15"}}
 
 }

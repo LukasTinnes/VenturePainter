@@ -27,6 +27,7 @@ class Loader:
         """
         # TODO fileending descrimination
         path, extension = os.path.splitext(filename)
+        extension = extension.lower()
         if extension == ".svg":
             return self._load_svg(filename)
         elif extension == ".png" or extension == ".jpg" or extension == ".jpeg":

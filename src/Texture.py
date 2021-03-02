@@ -206,17 +206,66 @@ class Texture:
         ref_img = cv2.cvtColor(ref_img, cv2.COLOR_BGR2RGB)
 
         if block_size is None:
-            block_size = min(ref_img.shape)/10
+            block_size = int(min(ref_img.shape)/10)
 
         img = np.ones((dimensions[0], dimensions[1], 3))
+        # For each block
         for x_block in range(math.ceil(img.shape[0] / block_size)):
             for y_block in range(math.ceil(img.shape[1] / block_size)):
+                # Calculate a starting point for a random block
                 random_x = random.randint(0, ref_img.shape[0] - block_size)
                 random_y = random.randint(0, ref_img.shape[1] - block_size)
+                # Fpr each pixel in the block
                 for x in range(block_size):
                     for y in range(block_size):
+                        # If the block is in the image, paste the pixel to it.
                         if x+x_block*block_size < img.shape[0] and y+y_block*block_size < img.shape[1]:
                             img[x+x_block*block_size, y+y_block*block_size,:] = ref_img[random_x + x, random_y + y,:] / 255
 
+        return img
+
+    @staticmethod
+    def neighbor_block_quilting(dimensions, filename, block_size=None, border_size=1, iterations=5):
+        ref_img = cv2.imread(filename)
+        ref_img = cv2.cvtColor(ref_img, cv2.COLOR_BGR2RGB)
+
+        if block_size is None:
+            block_size = int(min(ref_img.shape)/10)
+
+        virtual_block_size = block_size + border_size*2
+
+        img = np.zeros((dimensions[0], dimensions[1], 3))
+
+        # For each block in the image
+        for x_block in range(math.ceil(img.shape[0] / block_size)):
+            for y_block in range(math.ceil(img.shape[1] / block_size)):
+                minimal_energy = math.inf
+                minimal_block = None
+                # Do <iterations> iterations to find the perfect block to insert form the reference
+                for iteration in range(iterations):
+                    energy = 0
+                    random_x = random.randint(0, ref_img.shape[0] - virtual_block_size)
+                    random_y = random.randint(0, ref_img.shape[1] - virtual_block_size)
+                    # Find the energy on the edges of the block
+                    for x in range(virtual_block_size):
+                        for y in range(virtual_block_size):
+                            # Don't collect energy of indices bexonde the border
+                            if x+x_block*block_size < img.shape[0] and y+y_block*block_size < img.shape[1]:
+                                # Don't collect energy not on the edges and account for edge blocks
+                                if (x < border_size and x_block > 0) or (y < border_size and y_block > 0):
+                                    rgb_energy = abs(img[x+x_block*block_size, y+y_block*block_size, :] -
+                                                  ref_img[random_x + x, random_y + y, :] / 255)
+                                    energy += rgb_energy.sum()
+                    # Is the computed block better than the previous ones.
+                    if energy < minimal_energy:
+                        minimal_energy = energy
+                        minimal_block = (random_x, random_y)
+
+                # Paste the best block to the image
+                for x in range(virtual_block_size):
+                    for y in range(virtual_block_size):
+                        if x + x_block * block_size < img.shape[0] and y + y_block * block_size < img.shape[1]:
+                            img[x + x_block * block_size, y + y_block * block_size, :] = \
+                                ref_img[minimal_block[0] + x, minimal_block[1] + y, :] / 255
 
         return img

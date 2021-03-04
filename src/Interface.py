@@ -69,7 +69,7 @@ class Interface:
         self.viewing_window_x2 = TextBox(self.viewing_window_x2_ax, "x2", initial="500")
         self.viewing_window_y1 = TextBox(self.viewing_window_y1_ax, "y1", initial="0")
         self.viewing_window_y2 = TextBox(self.viewing_window_y2_ax, "y2", initial="500")
-        info_img = plt.imread("infobutton.png")
+        info_img = plt.imread("../Resources/infobutton.png")
         self.info_button = Button(self.info_button_ax, image=info_img, label='')
 
         def information(*args):
@@ -80,10 +80,7 @@ class Interface:
                              "4. Gib viewing window werte in den Feldern x1, x2, y1, y2 ein. \n "
                              "5. Painte über den Paint Button.")
 
-        try:
-            self.info_button.on_clicked(information)
-        except Exception as e:
-            logging.error(e)
+        self.info_button.on_clicked(information)
 
         def img_load(*args):
             try:

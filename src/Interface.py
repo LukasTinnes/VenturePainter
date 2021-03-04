@@ -80,37 +80,63 @@ class Interface:
                              "4. Gib viewing window werte in den Feldern x1, x2, y1, y2 ein. \n "
                              "5. Painte über den Paint Button.")
 
-        self.info_button.on_clicked(information)
+        try:
+            self.info_button.on_clicked(information)
+        except Exception as e:
+            logging.error(e)
 
         def img_load(*args):
-            filename = self.get_filename([("SVG-Image", "*.svg"), ("png image", "*.png"),
-                                          ("jpg image", "*.jpg *.jpeg"),
-                                          ("tagged image file", "*.tiff *.tif"),
-                                          ("All files", "*.*")], "Select image")
-            self.shapes, self.hierarchy = self.load_img(filename)
-            path, extension = os.path.splitext(filename)
-            # Some day I am going to add svg shit
-            if not extension == ".svg":
-                im = cv2.imread(filename)
-                self.img_ax.imshow(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
+            try:
+                filename = self.get_filename([("SVG-Image", "*.svg"), ("png image", "*.png"),
+                                              ("jpg image", "*.jpg *.jpeg"),
+                                              ("tagged image file", "*.tiff *.tif"),
+                                              ("All files", "*.*")], "Select image")
+                self.shapes, self.hierarchy = self.load_img(filename)
+                path, extension = os.path.splitext(filename)
+                # Some day I am going to add svg shit
+                if not extension == ".svg":
+                    im = cv2.imread(filename)
+                    self.img_ax.imshow(cv2.cvtColor(im, cv2.COLOR_BGR2RGB))
+            except Exception as e:
+                logging.error(e)
 
-        self.imgLoadButton.on_clicked(img_load)
+        try:
+            self.imgLoadButton.on_clicked(img_load)
+        except Exception as e:
+            logging.error(e)
 
         def theme_load(*args):
-            self.action_dict = self.load_theme()
+            try:
+                self.action_dict = self.load_theme()
+            except Exception as e:
+                logging.error(e)
 
-        self.themeLoadButton.on_clicked(theme_load)
+        try:
+            self.themeLoadButton.on_clicked(theme_load)
+        except Exception as e:
+            logging.error(e)
 
         def paint(*args):
-            self.img = self.paint()
-            self.img_ax.imshow(self.img)
+            try:
+                self.img = self.paint()
+                self.img_ax.imshow(self.img)
+            except Exception as e:
+                print(e)
+                logging.error(e)
 
-        self.paintButton.on_clicked(paint)
+        try:
+            self.paintButton.on_clicked(paint)
+        except Exception as e:
+            print(e)
+            logging.error(e)
 
         def save(*args):
-            if self.img is not None:
-                imsave("yee.png", self.img)
-                print("saved")
+            try:
+                if self.img is not None:
+                    imsave("yee.png", self.img)
+                    print("saved")
+            except Exception as e:
+                logging.error(e)
 
         def on_radio_select(*args):
             if self.radio_buttons.value_selected == "Uniform":
@@ -128,7 +154,9 @@ class Interface:
         self.saveButton.on_clicked(save)
 
     def run(self):
-        logging.basicConfig(filename='log.log', level=logging.INFO)
+        for handler in logging.root.handlers[:]:
+            logging.root.removeHandler(handler)
+        logging.basicConfig(filename='log.log', level=logging.INFO, filemode='w')
         logging.info(f"started execution at {datetime.datetime.now()}")
 
         plt.show()

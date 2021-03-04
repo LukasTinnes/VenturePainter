@@ -69,7 +69,7 @@ class Interface:
         self.viewing_window_x2 = TextBox(self.viewing_window_x2_ax, "x2", initial="500")
         self.viewing_window_y1 = TextBox(self.viewing_window_y1_ax, "y1", initial="0")
         self.viewing_window_y2 = TextBox(self.viewing_window_y2_ax, "y2", initial="500")
-        info_img = plt.imread("../Resources/infobutton.png")
+        info_img = plt.imread("infobutton.png")
         self.info_button = Button(self.info_button_ax, image=info_img, label='')
 
         def information(*args):

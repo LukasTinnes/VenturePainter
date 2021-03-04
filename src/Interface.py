@@ -24,7 +24,7 @@ from src.Themes.UniformTheme import UniformTheme
 
 matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
-from matplotlib.widgets import Button, RadioButtons
+from matplotlib.widgets import Button, RadioButtons, TextBox
 from matplotlib import gridspec
 
 
@@ -44,20 +44,29 @@ class Interface:
         # GUI Elements
         self.radio_labels = ["Uniform", "Neighbor", "Size", "SizeRatio", "Transformation"]
         self.fig = plt.figure()
-        self.gridspec = gridspec.GridSpec(5, 2, height_ratios=[0.1, 0.1, 0.1, 0.1, 0.9], width_ratios=[0.9, 0.1])
+        self.gridspec = gridspec.GridSpec(ncols=5, nrows=5, height_ratios=[0.8, 0.8, 0.8, 0.3, 0.3],
+                                          width_ratios=[0.5, 0.5, 0.25, 0.1, 0.1])
 
-        self.img_ax = self.fig.add_subplot(self.gridspec[:, 0])
-        self.paint_button_ax = self.fig.add_subplot(self.gridspec[2, 1])
-        self.img_load_button_ax = self.fig.add_subplot(self.gridspec[0, 1])
-        self.theme_load_button_ax = self.fig.add_subplot(self.gridspec[1, 1])
-        self.save_button_ax = self.fig.add_subplot(self.gridspec[3, 1])
-        self.radio_button_ax = self.fig.add_subplot(self.gridspec[4, 1])
+        self.img_ax = self.fig.add_subplot(self.gridspec[:3, :3])
+        self.paint_button_ax = self.fig.add_subplot(self.gridspec[3, 1])
+        self.img_load_button_ax = self.fig.add_subplot(self.gridspec[3, 0])
+        self.theme_load_button_ax = self.fig.add_subplot(self.gridspec[4, 0])
+        self.save_button_ax = self.fig.add_subplot(self.gridspec[4, 1])
+        self.radio_button_ax = self.fig.add_subplot(self.gridspec[:3, 3:])
+        self.viewing_window_x1_ax = self.fig.add_subplot(self.gridspec[3, 3])
+        self.viewing_window_x2_ax = self.fig.add_subplot(self.gridspec[4, 3])
+        self.viewing_window_y1_ax = self.fig.add_subplot(self.gridspec[3, 4])
+        self.viewing_window_y2_ax = self.fig.add_subplot(self.gridspec[4, 4])
 
         self.radio_buttons = RadioButtons(self.radio_button_ax, self.radio_labels)
         self.imgLoadButton = Button(self.img_load_button_ax, "Load Image")
         self.themeLoadButton = Button(self.theme_load_button_ax, "Load Theme")
         self.paintButton = Button(self.paint_button_ax, "Paint")
         self.saveButton = Button(self.save_button_ax, "Save")
+        self.viewing_window_x1 = TextBox(self.viewing_window_x1_ax, "x1", initial="0")
+        self.viewing_window_x2 = TextBox(self.viewing_window_x2_ax, "x2", initial="500")
+        self.viewing_window_y1 = TextBox(self.viewing_window_y1_ax, "y1", initial="0")
+        self.viewing_window_y2 = TextBox(self.viewing_window_y2_ax, "y2", initial="500")
 
         def img_load(*args):
             filename = self.get_filename([("SVG-Image", "*.svg"), ("png image", "*.png"),
@@ -90,13 +99,13 @@ class Interface:
                 print("saved")
 
         def on_radio_select(*args):
-            if self.radio_buttons.value_selected == 0:
+            if self.radio_buttons.value_selected == "Uniform":
                 self.theme = UniformTheme()
-            elif self.radio_buttons.value_selected == 1:
+            elif self.radio_buttons.value_selected == "Neighbor":
                 self.theme = NeighborTheme()
-            elif self.radio_buttons.value_selected == 2:
+            elif self.radio_buttons.value_selected == "Size":
                 self.theme = SizeTheme()
-            elif self.radio_buttons.value_selected == 3:
+            elif self.radio_buttons.value_selected == "SizeRatio":
                 self.theme = SizeRatioTheme()
             else:
                 self.theme = TransformationTheme()
@@ -158,5 +167,6 @@ class Interface:
         interpreter = Interpreter()
         interpreter.determine_kind(self.hierarchy, self.shapes, self.theme)
         painter = Painter()
-        viewing_window = pygame.Rect(0, 0, 1000, 1000)
+        viewing_window = pygame.Rect(int(self.viewing_window_x1.text), int(self.viewing_window_y1.text),
+                                     int(self.viewing_window_x2.text), int(self.viewing_window_y2.text))
         return painter.paint(self.hierarchy, self.shapes, viewing_window, self.action_dict)

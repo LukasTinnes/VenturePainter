@@ -271,7 +271,7 @@ class Texture:
         return img
 
     @staticmethod
-    def strech_img(dimensions, filename):
+    def stretch_img(dimensions, filename):
         ref_img = cv2.imread(filename)
         ref_img = cv2.cvtColor(ref_img, cv2.COLOR_BGR2RGB) / 255
 

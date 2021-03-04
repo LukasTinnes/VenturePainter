@@ -4,6 +4,7 @@ import logging
 import os
 from tkinter import *
 from tkinter import filedialog
+from tkinter.messagebox import showinfo
 
 import cv2
 import matplotlib
@@ -57,6 +58,7 @@ class Interface:
         self.viewing_window_x2_ax = self.fig.add_subplot(self.gridspec[4, 3])
         self.viewing_window_y1_ax = self.fig.add_subplot(self.gridspec[3, 4])
         self.viewing_window_y2_ax = self.fig.add_subplot(self.gridspec[4, 4])
+        self.info_button_ax = self.fig.add_subplot(self.gridspec[4, 2])
 
         self.radio_buttons = RadioButtons(self.radio_button_ax, self.radio_labels)
         self.imgLoadButton = Button(self.img_load_button_ax, "Load Image")
@@ -67,6 +69,18 @@ class Interface:
         self.viewing_window_x2 = TextBox(self.viewing_window_x2_ax, "x2", initial="500")
         self.viewing_window_y1 = TextBox(self.viewing_window_y1_ax, "y1", initial="0")
         self.viewing_window_y2 = TextBox(self.viewing_window_y2_ax, "y2", initial="500")
+        info_img = plt.imread("../Resources/infobutton.png")
+        self.info_button = Button(self.info_button_ax, image=info_img, label='')
+
+        def information(*args):
+            showinfo(title='Informationen',
+                     message="1. Wähle ein Bild aus über den Button Load Image \n "
+                             "2. Wähle ein Json Theme aus über den Button Load Theme \n "
+                             "3. Wähle über die Radiobuttons eine Methode aus. \n "
+                             "4. Gib viewing window werte in den Feldern x1, x2, y1, y2 ein. \n "
+                             "5. Painte über den Paint Button.")
+
+        self.info_button.on_clicked(information)
 
         def img_load(*args):
             filename = self.get_filename([("SVG-Image", "*.svg"), ("png image", "*.png"),

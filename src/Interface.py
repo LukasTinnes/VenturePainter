@@ -44,7 +44,7 @@ class Interface:
 
         # GUI Elements
         self.radio_labels = ["Uniform", "Neighbor", "Size", "SizeRatio", "Transformation"]
-        self.fig = plt.figure()
+        self.fig = plt.figure(num="Venture Painter")
         self.gridspec = gridspec.GridSpec(ncols=5, nrows=5, height_ratios=[0.8, 0.8, 0.8, 0.3, 0.3],
                                           width_ratios=[0.5, 0.5, 0.25, 0.1, 0.1])
 
